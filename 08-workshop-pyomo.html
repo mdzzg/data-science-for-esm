@@ -63,7 +63,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Build Your Own Content" href="15_build_YO_content.html" />
+    <link rel="next" title="Educators Build Your Own Content" href="15_build_YO_content.html" />
     <link rel="prev" title="Interactive Visualisation and Dashboards" href="13-workshop-interactive-visualisation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -197,7 +197,7 @@
 <li class="toctree-l1"><a class="reference internal" href="12-workshop-pypsa-sector-coupling.html">Sector-Coupling with <code class="docutils literal notranslate"><span class="pre">pypsa</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="13-workshop-interactive-visualisation.html">Interactive Visualisation and Dashboards</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction to <code class="docutils literal notranslate"><span class="pre">pyomo</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="15_build_YO_content.html"><font color="red">Build Your Own Content</font></a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_build_YO_content.html"><font color="red">Educators Build Your Own Content</font></a></li>
 
 
 
@@ -614,8 +614,8 @@ document.write(`
 <p><strong>Constraints</strong> are equality or inequality expressions that constrain the <em>feasible</em> space of the decision variables.</p>
 <p>In <code class="docutils literal notranslate"><span class="pre">pyomo</span></code>, constraints are created with the <code class="docutils literal notranslate"><span class="pre">pe.Constraint()</span></code> constructor.</p>
 <p>In the code below, we create three simple constraints in different ways:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d15a9fbe-49c6-46a7-a0b1-f99dd8493210">
-<span class="eqno">(14)<a class="headerlink" href="#equation-d15a9fbe-49c6-46a7-a0b1-f99dd8493210" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9a28c1c7-32bf-45dd-b869-8600d980044b">
+<span class="eqno">(14)<a class="headerlink" href="#equation-9a28c1c7-32bf-45dd-b869-8600d980044b" title="Permalink to this equation">#</a></span>\[\begin{align}
   x &amp; \leq 4 \\
   2x + y &amp; \leq 10 \\
   x + y &amp; \leq 10 \\
@@ -1145,13 +1145,13 @@ Solution:
 <section id="single-bidding-zone-single-period">
 <h3>Single bidding zone, single period<a class="headerlink" href="#single-bidding-zone-single-period" title="Link to this heading">#</a></h3>
 <p>We want to minimise operational cost of an example electricity system representing South Africa subject to generator limits and meeting the load:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-48bffaef-980b-446c-a2bb-c53047a61501">
-<span class="eqno">(15)<a class="headerlink" href="#equation-48bffaef-980b-446c-a2bb-c53047a61501" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d2bdaca3-fb58-4106-94cc-a15cd3ba3319">
+<span class="eqno">(15)<a class="headerlink" href="#equation-d2bdaca3-fb58-4106-94cc-a15cd3ba3319" title="Permalink to this equation">#</a></span>\[\begin{equation}
     \min_{g_s} \sum_s o_s g_s
   \end{equation}\]</div>
 <p>such that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cbc900ef-c54d-44e9-b7bc-d6f9bbf9f994">
-<span class="eqno">(16)<a class="headerlink" href="#equation-cbc900ef-c54d-44e9-b7bc-d6f9bbf9f994" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-74e0ac0e-25f2-4457-8b4e-d4612d6a3434">
+<span class="eqno">(16)<a class="headerlink" href="#equation-74e0ac0e-25f2-4457-8b4e-d4612d6a3434" title="Permalink to this equation">#</a></span>\[\begin{align}
     g_s &amp;\leq G_s \\
     g_s &amp;\geq 0 \\
     \sum_s g_s &amp;= d
@@ -1403,13 +1403,13 @@ dtype: float64
 <section id="two-bidding-zones-with-transmission">
 <h3>Two bidding zones with transmission<a class="headerlink" href="#two-bidding-zones-with-transmission" title="Link to this heading">#</a></h3>
 <p>Let’s add a spatial dimension, such that the optimisation problem is expanded to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-72befad1-bf31-44b8-b788-4db72497cb83">
-<span class="eqno">(17)<a class="headerlink" href="#equation-72befad1-bf31-44b8-b788-4db72497cb83" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e0e5ea65-1ab2-42ba-8e56-35b11a10e789">
+<span class="eqno">(17)<a class="headerlink" href="#equation-e0e5ea65-1ab2-42ba-8e56-35b11a10e789" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \min_{g_{i,s}, f_\ell} \sum_s o_{i,s} g_{i,s}
 \end{equation}\]</div>
 <p>such that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4a39c395-1ffd-418c-aa96-de82699d7860">
-<span class="eqno">(18)<a class="headerlink" href="#equation-4a39c395-1ffd-418c-aa96-de82699d7860" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-aef73005-06a7-49ec-8ca9-9112963571a6">
+<span class="eqno">(18)<a class="headerlink" href="#equation-aef73005-06a7-49ec-8ca9-9112963571a6" title="Permalink to this equation">#</a></span>\[\begin{align}
   g_{i,s} &amp;\leq G_{i,s} \\
   g_{i,s} &amp;\geq 0 \\
   \sum_s g_{i,s} - \sum_\ell K_{i\ell} f_\ell &amp;= d_i &amp; \text{KCL} \\
@@ -1564,8 +1564,8 @@ For missing entries, we set the upper limit to zero (e.g. this country-technolog
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kcl : Size=2, Index=countries, Active=True
     Key          : Lower   : Body                                                                                                                : Upper   : Active
-      Mozambique :   650.0 :           g[Mozambique,Wind] + g[Mozambique,Hydro] + g[Mozambique,Coal] + g[Mozambique,Oil] + g[Mozambique,Gas] + f :   650.0 :   True
-    South Africa : 42000.0 : g[South Africa,Wind] + g[South Africa,Hydro] + g[South Africa,Coal] + g[South Africa,Oil] + g[South Africa,Gas] - f : 42000.0 :   True
+      Mozambique :   650.0 :           g[Mozambique,Oil] + g[Mozambique,Gas] + g[Mozambique,Wind] + g[Mozambique,Coal] + g[Mozambique,Hydro] + f :   650.0 :   True
+    South Africa : 42000.0 : g[South Africa,Oil] + g[South Africa,Gas] + g[South Africa,Wind] + g[South Africa,Coal] + g[South Africa,Hydro] - f : 42000.0 :   True
 </pre></div>
 </div>
 </div>
@@ -1715,16 +1715,16 @@ Solution:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>generator_limit[South Africa,Wind]    -60.0
-generator_limit[South Africa,Hydro]   -60.0
-generator_limit[South Africa,Coal]    -30.0
-generator_limit[South Africa,Oil]      -0.0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>generator_limit[South Africa,Oil]      -0.0
 generator_limit[South Africa,Gas]      -0.0
-generator_limit[Mozambique,Wind]       -0.0
-generator_limit[Mozambique,Hydro]      -0.0
-generator_limit[Mozambique,Coal]       -0.0
+generator_limit[South Africa,Wind]    -60.0
+generator_limit[South Africa,Coal]    -30.0
+generator_limit[South Africa,Hydro]   -60.0
 generator_limit[Mozambique,Oil]        -0.0
 generator_limit[Mozambique,Gas]        -0.0
+generator_limit[Mozambique,Wind]       -0.0
+generator_limit[Mozambique,Coal]       -0.0
+generator_limit[Mozambique,Hydro]      -0.0
 kcl[South Africa]                      60.0
 kcl[Mozambique]                        -0.0
 [None]                                 60.0
@@ -1849,13 +1849,13 @@ Solution:
 <section id="single-bidding-zone-with-several-periods">
 <h3>Single bidding zone with several periods<a class="headerlink" href="#single-bidding-zone-with-several-periods" title="Link to this heading">#</a></h3>
 <p>In this example, we consider multiple time periods (labelled [1,2,3,4]) to represent variable wind generation and changing load.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2e7baaa8-1562-4ee9-8e02-83d0e9cd45cb">
-<span class="eqno">(19)<a class="headerlink" href="#equation-2e7baaa8-1562-4ee9-8e02-83d0e9cd45cb" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-838baaba-fbde-48ae-a31a-a720f8d9e41b">
+<span class="eqno">(19)<a class="headerlink" href="#equation-838baaba-fbde-48ae-a31a-a720f8d9e41b" title="Permalink to this equation">#</a></span>\[\begin{equation}
     \min_{g_{s,t}} \sum_s o_{s} g_{s,t}
   \end{equation}\]</div>
 <p>such that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f31534e0-28d5-49b2-a00b-289c6f9435db">
-<span class="eqno">(20)<a class="headerlink" href="#equation-f31534e0-28d5-49b2-a00b-289c6f9435db" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-beaa6366-7dc9-474e-983b-6dc670107a58">
+<span class="eqno">(20)<a class="headerlink" href="#equation-beaa6366-7dc9-474e-983b-6dc670107a58" title="Permalink to this equation">#</a></span>\[\begin{align}
     g_{s,t} &amp;\leq \hat{g}_{s,t} G_{i,s} \\
     g_{s,t} &amp;\geq 0 \\
     \sum_s g_{s,t} &amp;= d_t
@@ -2001,7 +2001,7 @@ Solver:
 Solution: 
 - number of solutions: 0
   number of solutions displayed: 0
-3.71 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
+4.51 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
 </pre></div>
 </div>
 </div>
@@ -2204,7 +2204,9 @@ dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running HiGHS 1.7.2 (git hash: 184e327): Copyright (c) 2024 HiGHS under MIT licence terms
-# ==========================================================
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># ==========================================================
 # = Solver Results                                         =
 # ==========================================================
 # ----------------------------------------------------------
@@ -2454,7 +2456,7 @@ dtype: float64
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><font color="red">Build Your Own Content</font></p>
+        <p class="prev-next-title"><font color="red">Educators Build Your Own Content</font></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
