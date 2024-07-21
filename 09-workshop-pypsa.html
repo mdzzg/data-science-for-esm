@@ -14,22 +14,22 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -37,16 +37,16 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -74,27 +74,23 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -116,8 +112,13 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -141,6 +142,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="intro.html">
   
@@ -162,7 +165,7 @@
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -209,7 +212,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -218,14 +221,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -250,14 +253,14 @@
       
       <li><a href="https://colab.research.google.com/github/fneum/data-science-for-esm/blob/main/data-science-for-esm/09-workshop-pypsa.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onColab"
+   title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="_static/images/logo_colab.png">
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
@@ -381,10 +384,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -392,14 +395,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -488,7 +491,7 @@ document.write(`
 </section>
 <section id="basic-structure">
 <h2>Basic Structure<a class="headerlink" href="#basic-structure" title="Link to this heading">#</a></h2>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Component</p></th>
 <th class="head"><p>Description</p></th>
@@ -542,6 +545,7 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Links in the table lead to documentation for each component.</p>
@@ -556,13 +560,13 @@ document.write(`
 <h2>From structured data to optimisation<a class="headerlink" href="#from-structured-data-to-optimisation" title="Link to this heading">#</a></h2>
 <p>The design principle of PyPSA is that basically each component is associated with a set of variables and constraints that will be added to the optimisation model based on the input data stored for the components.</p>
 <p>For an <em>hourly</em> electricity market simulation, PyPSA will solve an optimisation problem that looks like this</p>
-<div class="amsmath math notranslate nohighlight" id="equation-77c827f8-186d-428b-9833-1aadde5e7e9f">
-<span class="eqno">(12)<a class="headerlink" href="#equation-77c827f8-186d-428b-9833-1aadde5e7e9f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-bffe1d2f-e1c9-4f1a-b093-cfa4edee7200">
+<span class="eqno">(12)<a class="headerlink" href="#equation-bffe1d2f-e1c9-4f1a-b093-cfa4edee7200" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \min_{g_{i,s,t}; f_{\ell,t}; g_{i,r,t,\text{charge}}; g_{i,r,t,\text{discharge}}; e_{i,r,t}} \sum_s o_{s} g_{i,s,t}
 \end{equation}\]</div>
 <p>such that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e080c748-411b-43c5-bcec-de8f18d4e09b">
-<span class="eqno">(13)<a class="headerlink" href="#equation-e080c748-411b-43c5-bcec-de8f18d4e09b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7b05204c-d274-48e4-b2a5-de29c5dfd69c">
+<span class="eqno">(13)<a class="headerlink" href="#equation-7b05204c-d274-48e4-b2a5-de29c5dfd69c" title="Permalink to this equation">#</a></span>\[\begin{align}
 0 &amp; \leq g_{i,s,t} \leq \hat{g}_{i,s,t} G_{i,s}  &amp; \text{generation limits : generator} \\
 -F_\ell &amp;\leq f_{\ell,t} \leq F_\ell &amp; \text{transmission limits : line}  \\
 d_{i,t} &amp;= \sum_s g_{i,s,t} + \sum_r g_{i,r,t,\text{discharge}} - \sum_r g_{i,r,t,\text{charge}} - \sum_\ell K_{i\ell} f_{\ell,t} &amp; \text{KCL : bus} \\
@@ -1279,7 +1283,7 @@ d_{i,t} &amp;= \sum_s g_{i,s,t} + \sum_r g_{i,r,t,\text{discharge}} - \sum_r g_{
 facecolor will have no effect as it has been defined as &quot;never&quot;.
 </pre></div>
 </div>
-<img alt="_images/85eda9742ec89f8969d9df0ac9f4c228edb68d2389739c2b579fe19c68e2a075.png" src="_images/85eda9742ec89f8969d9df0ac9f4c228edb68d2389739c2b579fe19c68e2a075.png" />
+<img alt="_images/053f4a28fb53e42ad490c0f69bdb3cbe825f08e6e47a4fb8e44c48ebe2858b18.png" src="_images/053f4a28fb53e42ad490c0f69bdb3cbe825f08e6e47a4fb8e44c48ebe2858b18.png" />
 </div>
 </div>
 </section>
@@ -1305,7 +1309,7 @@ facecolor will have no effect as it has been defined as &quot;never&quot;.
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.io: Writing time: 0.02s
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.solvers:Log file at /tmp/highs.log.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.solvers:Log file at /tmp/highs.log
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.constants: Optimization successful: 
@@ -1320,16 +1324,21 @@ Solver message: optimal
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:pypsa.optimization.optimize:The shadow-prices of the constraints Generator-fix-p-lower, Generator-fix-p-upper, Line-fix-s-lower, Line-fix-s-upper were not assigned to the network.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running HiGHS 1.5.3 [date: 2023-05-16, git hash: 594fa5a9d-dirty]
-Copyright (c) 2023 HiGHS under MIT licence terms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running HiGHS 1.7.2 (git hash: 184e327): Copyright (c) 2024 HiGHS under MIT licence terms
+Coefficient ranges:
+  Matrix [1e+00, 1e+00]
+  Cost   [2e+01, 2e+02]
+  Bound  [0e+00, 0e+00]
+  RHS    [5e+02, 4e+04]
 Presolving model
-1 rows, 2 cols, 2 nonzeros
-0 rows, 0 cols, 0 nonzeros
+1 rows, 2 cols, 2 nonzeros  0s
+0 rows, 0 cols, 0 nonzeros  0s
 Presolve : Reductions: rows 0(-14); columns 0(-6); elements 0(-19) - Reduced to empty
 Solving the original LP from the solution after postsolve
 Model   status      : Optimal
 Objective value     :  1.3813912524e+06
 HiGHS run time      :          0.00
+Writing the solution to /tmp/linopy-solve-ymxr92fj.sol
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;ok&#39;, &#39;optimal&#39;)
@@ -1602,11 +1611,11 @@ HiGHS run time      :          0.00
 facecolor will have no effect as it has been defined as &quot;never&quot;.
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;matplotlib.collections.PatchCollection at 0x7f2f95c32a90&gt;,
- &lt;matplotlib.collections.LineCollection at 0x7f2f95c1b290&gt;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;matplotlib.collections.PatchCollection at 0x7f09f8044750&gt;,
+ &lt;matplotlib.collections.LineCollection at 0x7f09f7e8d750&gt;)
 </pre></div>
 </div>
-<img alt="_images/a1f6957fa96a99250447723c44923fad9c839ad6e070a4783347e00eb00b94a0.png" src="_images/a1f6957fa96a99250447723c44923fad9c839ad6e070a4783347e00eb00b94a0.png" />
+<img alt="_images/7e07424c54793bed3c13d4827575743dc3860c30a9c8964ee06d6a7a4f141a8e.png" src="_images/7e07424c54793bed3c13d4827575743dc3860c30a9c8964ee06d6a7a4f141a8e.png" />
 </div>
 </div>
 <p>Since we have provided <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> coordinates for our buses, <code class="docutils literal notranslate"><span class="pre">n.plot()</span></code> will try to plot the network on a map by default. Of course, there’s an option to deactivate this behaviour:</p>
@@ -1617,7 +1626,7 @@ facecolor will have no effect as it has been defined as &quot;never&quot;.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/48708d621e9cf784c06c7b153f54ffe9fb8cc2c2cd57e8127e0e920fc903a81f.png" src="_images/48708d621e9cf784c06c7b153f54ffe9fb8cc2c2cd57e8127e0e920fc903a81f.png" />
+<img alt="_images/68c54d75bb83dbfb5c95566524abdd191faebee7d0c10cced15da7d4c9ab9929.png" src="_images/68c54d75bb83dbfb5c95566524abdd191faebee7d0c10cced15da7d4c9ab9929.png" />
 </div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">n.plot()</span></code> function has a variety of styling arguments to tweak the appearance of the buses, the lines and the map in the background:</p>
@@ -1642,7 +1651,7 @@ facecolor will have no effect as it has been defined as &quot;never&quot;.
 facecolor will have no effect as it has been defined as &quot;never&quot;.
 </pre></div>
 </div>
-<img alt="_images/42408bf8e98c1c14f75bbe23e198a3eb631d175a41731e12fc9ae0be0558829f.png" src="_images/42408bf8e98c1c14f75bbe23e198a3eb631d175a41731e12fc9ae0be0558829f.png" />
+<img alt="_images/92dbfaaa28a9d12bcb2507d74031dd5e424ba5bd69a795ecd0cb2bf3d06f159a.png" src="_images/92dbfaaa28a9d12bcb2507d74031dd5e424ba5bd69a795ecd0cb2bf3d06f159a.png" />
 </div>
 </div>
 <p>Just like with <code class="docutils literal notranslate"><span class="pre">geopandas</span></code> we can also control the projection of the network plot:</p>
@@ -1661,7 +1670,7 @@ facecolor will have no effect as it has been defined as &quot;never&quot;.
 facecolor will have no effect as it has been defined as &quot;never&quot;.
 </pre></div>
 </div>
-<img alt="_images/ae9154909da85b918353e00098e5247b811efb8ccc423b9757e629b7e175bcfb.png" src="_images/ae9154909da85b918353e00098e5247b811efb8ccc423b9757e629b7e175bcfb.png" />
+<img alt="_images/b42fb13d5ebe61ad3398921556b8aee98e5383facebbea6529445920424eac51.png" src="_images/b42fb13d5ebe61ad3398921556b8aee98e5383facebbea6529445920424eac51.png" />
 </div>
 </div>
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">bus_sizes</span></code> argument of <code class="docutils literal notranslate"><span class="pre">n.plot()</span></code> to display the regional distribution of load. First, we calculate the total load per bus:</p>
@@ -1700,7 +1709,7 @@ Name: p_set, dtype: float64
 facecolor will have no effect as it has been defined as &quot;never&quot;.
 </pre></div>
 </div>
-<img alt="_images/e14fe7f5891ebec57d6ef1df4066217462aaa5e94b58de3731b20520aac1678d.png" src="_images/e14fe7f5891ebec57d6ef1df4066217462aaa5e94b58de3731b20520aac1678d.png" />
+<img alt="_images/85d49dd7d730f4eeeb87838ce8bc1ba42ad50328aaa901fffb323e858d7c6b7f.png" src="_images/85d49dd7d730f4eeeb87838ce8bc1ba42ad50328aaa901fffb323e858d7c6b7f.png" />
 </div>
 </div>
 <p>The important point here is, that <code class="docutils literal notranslate"><span class="pre">s</span></code> needs to have entries for all buses, i.e. its index needs to match <code class="docutils literal notranslate"><span class="pre">n.buses.index</span></code>.</p>
@@ -1764,7 +1773,7 @@ Name: now, dtype: float64
 facecolor will have no effect as it has been defined as &quot;never&quot;.
 </pre></div>
 </div>
-<img alt="_images/5717ee99f088ecb3155e24b0da01956c2349692617461d9c6279d0b3b879394f.png" src="_images/5717ee99f088ecb3155e24b0da01956c2349692617461d9c6279d0b3b879394f.png" />
+<img alt="_images/10c076e9d83f0ed4927ef9718e0c5d8cf197c761b45c9a69328cb9527c242707.png" src="_images/10c076e9d83f0ed4927ef9718e0c5d8cf197c761b45c9a69328cb9527c242707.png" />
 </div>
 </div>
 <p><strong>How does this magic work?</strong> The plotting function will look up the colors specified in <code class="docutils literal notranslate"><span class="pre">n.carriers</span></code> for each carrier and match it with the second index-level of <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
@@ -1899,7 +1908,7 @@ facecolor will have no effect as it has been defined as &quot;never&quot;.
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.io: Writing time: 0.02s
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.solvers:Log file at /tmp/highs.log.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.solvers:Log file at /tmp/highs.log
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.constants: Optimization successful: 
@@ -1914,16 +1923,21 @@ Solver message: optimal
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:pypsa.optimization.optimize:The shadow-prices of the constraints Generator-fix-p-lower, Generator-fix-p-upper, Line-fix-s-lower, Line-fix-s-upper were not assigned to the network.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running HiGHS 1.5.3 [date: 2023-05-16, git hash: 594fa5a9d-dirty]
-Copyright (c) 2023 HiGHS under MIT licence terms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running HiGHS 1.7.2 (git hash: 184e327): Copyright (c) 2024 HiGHS under MIT licence terms
+Coefficient ranges:
+  Matrix [1e+00, 1e+00]
+  Cost   [2e+01, 2e+02]
+  Bound  [0e+00, 0e+00]
+  RHS    [4e+02, 4e+04]
 Presolving model
-1 rows, 2 cols, 2 nonzeros
-0 rows, 0 cols, 0 nonzeros
+1 rows, 2 cols, 2 nonzeros  0s
+0 rows, 0 cols, 0 nonzeros  0s
 Presolve : Reductions: rows 0(-14); columns 0(-6); elements 0(-19) - Reduced to empty
 Solving the original LP from the solution after postsolve
 Model   status      : Optimal
 Objective value     :  1.3986326317e+06
 HiGHS run time      :          0.00
+Writing the solution to /tmp/linopy-solve-if8msurn.sol
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;ok&#39;, &#39;optimal&#39;)
@@ -2099,7 +2113,7 @@ HiGHS run time      :          0.00
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.io: Writing time: 0.02s
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.solvers:Log file at /tmp/highs.log.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.solvers:Log file at /tmp/highs.log
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.constants: Optimization successful: 
@@ -2114,17 +2128,22 @@ Solver message: optimal
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:pypsa.optimization.optimize:The shadow-prices of the constraints Generator-fix-p-lower, Generator-fix-p-upper, Line-fix-s-lower, Line-fix-s-upper were not assigned to the network.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running HiGHS 1.5.3 [date: 2023-05-16, git hash: 594fa5a9d-dirty]
-Copyright (c) 2023 HiGHS under MIT licence terms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running HiGHS 1.7.2 (git hash: 184e327): Copyright (c) 2024 HiGHS under MIT licence terms
+Coefficient ranges:
+  Matrix [3e-01, 1e+00]
+  Cost   [2e+01, 2e+02]
+  Bound  [0e+00, 0e+00]
+  RHS    [4e+02, 4e+04]
 Presolving model
-2 rows, 3 cols, 6 nonzeros
-1 rows, 2 cols, 2 nonzeros
-0 rows, 0 cols, 0 nonzeros
+2 rows, 3 cols, 6 nonzeros  0s
+1 rows, 2 cols, 2 nonzeros  0s
+0 rows, 0 cols, 0 nonzeros  0s
 Presolve : Reductions: rows 0(-15); columns 0(-6); elements 0(-22) - Reduced to empty
 Solving the original LP from the solution after postsolve
 Model   status      : Optimal
 Objective value     :  2.1206212849e+06
 HiGHS run time      :          0.00
+Writing the solution to /tmp/linopy-solve-oorpttfy.sol
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;ok&#39;, &#39;optimal&#39;)
@@ -2279,7 +2298,7 @@ Name: mu, dtype: float64
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.io: Writing time: 0.02s
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.solvers:Log file at /tmp/highs.log.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.solvers:Log file at /tmp/highs.log
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:linopy.constants:Optimization failed: 
@@ -2291,13 +2310,18 @@ Solver model: available
 Solver message: infeasible
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running HiGHS 1.5.3 [date: 2023-05-16, git hash: 594fa5a9d-dirty]
-Copyright (c) 2023 HiGHS under MIT licence terms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running HiGHS 1.7.2 (git hash: 184e327): Copyright (c) 2024 HiGHS under MIT licence terms
+Coefficient ranges:
+  Matrix [3e-01, 1e+00]
+  Cost   [2e+01, 2e+02]
+  Bound  [0e+00, 0e+00]
+  RHS    [8e-01, 4e+04]
 Presolving model
 Problem status detected on presolve: Infeasible
 Model   status      : Infeasible
 Objective value     :  0.0000000000e+00
 HiGHS run time      :          0.00
+Writing the solution to /tmp/linopy-solve-hijtah5w.sol
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;warning&#39;, &#39;infeasible&#39;)
@@ -2330,7 +2354,7 @@ HiGHS run time      :          0.00
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.io:Directory tmp does not exist, creating it
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:pypsa.io:Exported network tmp has global_constraints, loads, carriers, generators, buses, lines
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:pypsa.io:Exported network tmp has generators, loads, buses, lines, carriers, global_constraints
 </pre></div>
 </div>
 </div>
@@ -2354,7 +2378,7 @@ HiGHS run time      :          0.00
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:pypsa.io:Exported network tmp.nc has global_constraints, loads, carriers, generators, buses, lines
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:pypsa.io:Exported network tmp.nc has generators, loads, buses, lines, carriers, global_constraints
 </pre></div>
 </div>
 </div>
@@ -2590,7 +2614,7 @@ HiGHS run time      :          0.00
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;snapshot&#39;, ylabel=&#39;MW&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/51c768312edbae167b61d8319cf49637e0439299ade962be7fdefc88d6167f07.png" src="_images/51c768312edbae167b61d8319cf49637e0439299ade962be7fdefc88d6167f07.png" />
+<img alt="_images/d0267a286f5b83656c8897c1eb9072512022c7b08b1ac15ff56ea82f6439a6d7.png" src="_images/d0267a286f5b83656c8897c1eb9072512022c7b08b1ac15ff56ea82f6439a6d7.png" />
 </div>
 </div>
 <p>… and the capacity factor time series:</p>
@@ -2604,7 +2628,7 @@ HiGHS run time      :          0.00
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;snapshot&#39;, ylabel=&#39;p.u.&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/7aae1459ea69bb4713a8e2fda0d0d32ffe65e854c04bb3022cd1634aeafa9887.png" src="_images/7aae1459ea69bb4713a8e2fda0d0d32ffe65e854c04bb3022cd1634aeafa9887.png" />
+<img alt="_images/918d4eed3b409e85b247378fa37487cf817420944040b78e859564dd26a2b67f.png" src="_images/918d4eed3b409e85b247378fa37487cf817420944040b78e859564dd26a2b67f.png" />
 </div>
 </div>
 <p>We can also inspect the total power plant capacities per technology…</p>
@@ -2619,7 +2643,7 @@ HiGHS run time      :          0.00
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;GW&#39;)
 </pre></div>
 </div>
-<img alt="_images/f6118e745916f9556bcfdf1c32c00b894a4b3dc3ac497abcb5dba4add50f65e8.png" src="_images/f6118e745916f9556bcfdf1c32c00b894a4b3dc3ac497abcb5dba4add50f65e8.png" />
+<img alt="_images/e49937912eda03449f456227dcdebc886961bc22214fd134d9e419d7d31381bd.png" src="_images/e49937912eda03449f456227dcdebc886961bc22214fd134d9e419d7d31381bd.png" />
 </div>
 </div>
 <p>… and plot the regional distribution of loads…</p>
@@ -2648,7 +2672,7 @@ HiGHS run time      :          0.00
 facecolor will have no effect as it has been defined as &quot;never&quot;.
 </pre></div>
 </div>
-<img alt="_images/cb80e8a77f6c22be798c0a59f4809ee8659c00afecb9a9b9e0590a8dbf34e38e.png" src="_images/cb80e8a77f6c22be798c0a59f4809ee8659c00afecb9a9b9e0590a8dbf34e38e.png" />
+<img alt="_images/27f491c79037afd2319799efb7303bc054a9d71e854afde364db855c3e3d3f78.png" src="_images/27f491c79037afd2319799efb7303bc054a9d71e854afde364db855c3e3d3f78.png" />
 </div>
 </div>
 <p>… and power plant capacities:</p>
@@ -2704,7 +2728,7 @@ facecolor will have no effect as it has been defined as &quot;never&quot;.
 facecolor will have no effect as it has been defined as &quot;never&quot;.
 </pre></div>
 </div>
-<img alt="_images/7959dff12d436c04da9274e224faa24214aff512cfd93a0f9ccd3bec85f6562f.png" src="_images/7959dff12d436c04da9274e224faa24214aff512cfd93a0f9ccd3bec85f6562f.png" />
+<img alt="_images/4b933fb6fa6308ce7ed9e21ec2674d890923cea9698af736df294f810ac34729.png" src="_images/4b933fb6fa6308ce7ed9e21ec2674d890923cea9698af736df294f810ac34729.png" />
 </div>
 </div>
 <p>This dataset also includes a few hydro storage units:</p>
@@ -2908,16 +2932,16 @@ Index([&#39;2&#39;, &#39;5&#39;, &#39;10&#39;, &#39;12&#39;, &#39;13&#39;, &#39;
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:   0%|          | 0/15 [00:00&lt;?, ?it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:  13%|█▎        | 2/15 [00:00&lt;00:01, 12.32it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:  13%|█▎        | 2/15 [00:00&lt;00:01, 12.83it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:  27%|██▋       | 4/15 [00:00&lt;00:00, 15.61it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:  27%|██▋       | 4/15 [00:00&lt;00:00, 16.18it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:  87%|████████▋ | 13/15 [00:00&lt;00:00, 33.67it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:  87%|████████▋ | 13/15 [00:00&lt;00:00, 34.61it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.: 100%|██████████| 15/15 [00:00&lt;00:00, 26.24it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.: 100%|██████████| 15/15 [00:00&lt;00:00, 27.17it/s]
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -2926,32 +2950,39 @@ Index([&#39;2&#39;, &#39;5&#39;, &#39;10&#39;, &#39;12&#39;, &#39;13&#39;, &#39;
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing continuous variables.:   0%|          | 0/6 [00:00&lt;?, ?it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing continuous variables.: 100%|██████████| 6/6 [00:00&lt;00:00, 62.67it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing continuous variables.: 100%|██████████| 6/6 [00:00&lt;00:00, 62.11it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.io: Writing time: 0.69s
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.io: Writing time: 0.67s
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.solvers:Log file at /tmp/highs.log.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.solvers:Log file at /tmp/highs.log
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running HiGHS 1.5.3 [date: 2023-05-16, git hash: 594fa5a9d-dirty]
-Copyright (c) 2023 HiGHS under MIT licence terms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running HiGHS 1.7.2 (git hash: 184e327): Copyright (c) 2024 HiGHS under MIT licence terms
+Coefficient ranges:
+  Matrix [1e-02, 2e+02]
+  Cost   [3e+00, 1e+02]
+  Bound  [0e+00, 0e+00]
+  RHS    [2e-11, 6e+03]
 Presolving model
-18737 rows, 44750 cols, 115742 nonzeros
-13209 rows, 39028 cols, 107511 nonzeros
-12712 rows, 31688 cols, 99693 nonzeros
-Presolve : Reductions: rows 12712(-130256); columns 31688(-27952); elements 99693(-163933)
+18737 rows, 44750 cols, 115742 nonzeros  0s
+13266 rows, 39085 cols, 107646 nonzeros  0s
+12708 rows, 31697 cols, 99739 nonzeros  0s
+12699 rows, 31675 cols, 99730 nonzeros  0s
+Presolve : Reductions: rows 12699(-130269); columns 31675(-27965); elements 99730(-163896)
 Solving the presolved LP
 Using EKK dual simplex solver - serial
   Iteration        Objective     Infeasibilities num(sum)
           0     0.0000000000e+00 Ph1: 0(0) 0s
-      17079     9.1992880405e+06 Pr: 0(0); Du: 0(3.02869e-13) 4s
+      17203     9.1992880405e+06 Pr: 0(0); Du: 0(1.24345e-14) 4s
+      17203     9.1992880405e+06 Pr: 0(0); Du: 0(1.24345e-14) 4s
 Solving the original LP from the solution after postsolve
 Model   status      : Optimal
-Simplex   iterations: 17079
+Simplex   iterations: 17203
 Objective value     :  9.1992880405e+06
-HiGHS run time      :          4.31
+HiGHS run time      :          4.51
+Writing the solution to /tmp/linopy-solve-kw3aotdg.sol
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.constants: Optimization successful: 
@@ -3031,33 +3062,33 @@ facecolor will have no effect as it has been defined as &quot;never&quot;.
 <span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="n">shrink</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span>
 <span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/matplotlib/pyplot.py:2430,</span> in <span class="ni">colorbar</span><span class="nt">(mappable, cax, ax, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2425</span>     <span class="k">if</span> <span class="n">mappable</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2426</span>         <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;No mappable was found to use for colorbar &#39;</span>
-<span class="g g-Whitespace">   </span><span class="mi">2427</span>                            <span class="s1">&#39;creation. First define a mappable such as &#39;</span>
-<span class="g g-Whitespace">   </span><span class="mi">2428</span>                            <span class="s1">&#39;an image (with imshow) or a contour set (&#39;</span>
-<span class="g g-Whitespace">   </span><span class="mi">2429</span>                            <span class="s1">&#39;with contourf).&#39;</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">2430</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">mappable</span><span class="p">,</span> <span class="n">cax</span><span class="o">=</span><span class="n">cax</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2431</span> <span class="k">return</span> <span class="n">ret</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/matplotlib/pyplot.py:2516,</span> in <span class="ni">colorbar</span><span class="nt">(mappable, cax, ax, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2511</span>     <span class="k">if</span> <span class="n">mappable</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2512</span>         <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;No mappable was found to use for colorbar &#39;</span>
+<span class="g g-Whitespace">   </span><span class="mi">2513</span>                            <span class="s1">&#39;creation. First define a mappable such as &#39;</span>
+<span class="g g-Whitespace">   </span><span class="mi">2514</span>                            <span class="s1">&#39;an image (with imshow) or a contour set (&#39;</span>
+<span class="g g-Whitespace">   </span><span class="mi">2515</span>                            <span class="s1">&#39;with contourf).&#39;</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">2516</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">mappable</span><span class="p">,</span> <span class="n">cax</span><span class="o">=</span><span class="n">cax</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2517</span> <span class="k">return</span> <span class="n">ret</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/matplotlib/figure.py:1213,</span> in <span class="ni">FigureBase.colorbar</span><span class="nt">(self, mappable, cax, ax, use_gridspec, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1211</span> <span class="k">if</span> <span class="n">cax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1212</span>     <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1213</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1214</span>             <span class="s1">&#39;Unable to determine Axes to steal space for Colorbar. &#39;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1215</span>             <span class="s1">&#39;Either provide the *cax* argument to use as the Axes for &#39;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1216</span>             <span class="s1">&#39;the Colorbar, provide the *ax* argument to steal space &#39;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1217</span>             <span class="s1">&#39;from it, or add *mappable* to an Axes.&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1218</span>     <span class="n">fig</span> <span class="o">=</span> <span class="p">(</span>  <span class="c1"># Figure of first Axes; logic copied from make_axes.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1219</span>         <span class="p">[</span><span class="o">*</span><span class="n">ax</span><span class="o">.</span><span class="n">flat</span><span class="p">]</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1220</span>         <span class="k">else</span> <span class="p">[</span><span class="o">*</span><span class="n">ax</span><span class="p">]</span> <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">iterable</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1221</span>         <span class="k">else</span> <span class="p">[</span><span class="n">ax</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">figure</span>
-<span class="g g-Whitespace">   </span><span class="mi">1222</span>     <span class="n">current_ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/matplotlib/figure.py:1215,</span> in <span class="ni">FigureBase.colorbar</span><span class="nt">(self, mappable, cax, ax, use_gridspec, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1213</span> <span class="k">if</span> <span class="n">cax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1214</span>     <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1215</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1216</span>             <span class="s1">&#39;Unable to determine Axes to steal space for Colorbar. &#39;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1217</span>             <span class="s1">&#39;Either provide the *cax* argument to use as the Axes for &#39;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1218</span>             <span class="s1">&#39;the Colorbar, provide the *ax* argument to steal space &#39;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1219</span>             <span class="s1">&#39;from it, or add *mappable* to an Axes.&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1220</span>     <span class="n">fig</span> <span class="o">=</span> <span class="p">(</span>  <span class="c1"># Figure of first Axes; logic copied from make_axes.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1221</span>         <span class="p">[</span><span class="o">*</span><span class="n">ax</span><span class="o">.</span><span class="n">flat</span><span class="p">]</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1222</span>         <span class="k">else</span> <span class="p">[</span><span class="o">*</span><span class="n">ax</span><span class="p">]</span> <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">iterable</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1223</span>         <span class="k">else</span> <span class="p">[</span><span class="n">ax</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">figure</span>
+<span class="g g-Whitespace">   </span><span class="mi">1224</span>     <span class="n">current_ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
 
 <span class="ne">ValueError</span>: Unable to determine Axes to steal space for Colorbar. Either provide the *cax* argument to use as the Axes for the Colorbar, provide the *ax* argument to steal space from it, or add *mappable* to an Axes.
 </pre></div>
 </div>
-<img alt="_images/7e1dc5dd57433969c74a0be60dd1f404cc5bbe33f78313a937a9214f70e3be4b.png" src="_images/7e1dc5dd57433969c74a0be60dd1f404cc5bbe33f78313a937a9214f70e3be4b.png" />
+<img alt="_images/a3e1f8a6af326c3c0d8d7eaf1cba518f5bf4c492516300d3497ab1b71a144fb0.png" src="_images/a3e1f8a6af326c3c0d8d7eaf1cba518f5bf4c492516300d3497ab1b71a144fb0.png" />
 </div>
 </div>
 <p>Or plot the hourly dispatch grouped by carrier:</p>
@@ -3158,7 +3189,7 @@ facecolor will have no effect as it has been defined as &quot;never&quot;.
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -3254,8 +3285,8 @@ By Fabian Neumann
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

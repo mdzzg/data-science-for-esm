@@ -14,22 +14,22 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -37,16 +37,16 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -74,27 +74,23 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -116,8 +112,13 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -141,6 +142,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="intro.html">
   
@@ -162,7 +165,7 @@
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -209,7 +212,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -218,14 +221,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -250,14 +253,14 @@
       
       <li><a href="https://colab.research.google.com/github/fneum/data-science-for-esm/blob/main/data-science-for-esm/12-workshop-pypsa-sector-coupling.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onColab"
+   title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="_static/images/logo_colab.png">
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
@@ -381,10 +384,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -392,14 +395,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -479,7 +482,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;network-cem.nc&#39;, &lt;http.client.HTTPMessage at 0x7ff514e17010&gt;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;network-cem.nc&#39;, &lt;http.client.HTTPMessage at 0x7ff20fe34750&gt;)
 </pre></div>
 </div>
 </div>
@@ -724,7 +727,7 @@ Name: 0, dtype: float64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;snapshot&#39;, ylabel=&#39;GW&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/46512d9e1d2f04890083189e6aed0170da71faf31ca3658c284b7634605d6e07.png" src="_images/46512d9e1d2f04890083189e6aed0170da71faf31ca3658c284b7634605d6e07.png" />
+<img alt="_images/763f6cfc510860bf22d43757dc5b889a659decb4adb52e8ac7db7c57c89c95c3.png" src="_images/763f6cfc510860bf22d43757dc5b889a659decb4adb52e8ac7db7c57c89c95c3.png" />
 </div>
 </div>
 </section>
@@ -764,7 +767,7 @@ COP(\Delta T) = 6.81 - 0.121 \Delta T + 0.00063^\Delta T^2
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/b50f7f0b4530fae3db23730a116162ae64d7d9d43f396c1d7e02cbf1623e03ea.png" src="_images/b50f7f0b4530fae3db23730a116162ae64d7d9d43f396c1d7e02cbf1623e03ea.png" />
+<img alt="_images/abf7a66227e553e88d90f84dc70bb639e13a023e67ce59d077b9220f7634b609.png" src="_images/abf7a66227e553e88d90f84dc70bb639e13a023e67ce59d077b9220f7634b609.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -779,7 +782,7 @@ COP(\Delta T) = 6.81 - 0.121 \Delta T + 0.00063^\Delta T^2
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;COP [-]&#39;)
 </pre></div>
 </div>
-<img alt="_images/849a6be2184ebc4785d7e683b2c03ebe1fa7f1a01b34261eb379f49ae6f84dd7.png" src="_images/849a6be2184ebc4785d7e683b2c03ebe1fa7f1a01b34261eb379f49ae6f84dd7.png" />
+<img alt="_images/7692e522b1f689c7f09779189c3bc007a23c63c1940fda3bbb9cdb819f0bebb6.png" src="_images/7692e522b1f689c7f09779189c3bc007a23c63c1940fda3bbb9cdb819f0bebb6.png" />
 </div>
 </div>
 <p>Once we have calculated the heat pump coefficient of performance, we can add the heat pump to the network as a <code class="docutils literal notranslate"><span class="pre">Link</span></code>. We use the parameter <code class="docutils literal notranslate"><span class="pre">efficiency</span></code> to incorporate the COP.</p>
@@ -944,7 +947,7 @@ COP(\Delta T) = 6.81 - 0.121 \Delta T + 0.00063^\Delta T^2
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;snapshot&#39;, ylabel=&#39;GW&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/29d6ecf4c4469b4634e2373b51aaafc0ea744029aeee3b64380c53faad4ef65e.png" src="_images/29d6ecf4c4469b4634e2373b51aaafc0ea744029aeee3b64380c53faad4ef65e.png" />
+<img alt="_images/0b21afd4330e83adb7199114d7afaf693c1c6a14abb4113f564776d1f30c49f3.png" src="_images/0b21afd4330e83adb7199114d7afaf693c1c6a14abb4113f564776d1f30c49f3.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -966,10 +969,10 @@ COP(\Delta T) = 6.81 - 0.121 \Delta T + 0.00063^\Delta T^2
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7ff4c8305fd0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7ff20e24b3d0&gt;
 </pre></div>
 </div>
-<img alt="_images/41c6d38ebca7b73321099942b41be79a732c3ceb777dba79b3662e365318d124.png" src="_images/41c6d38ebca7b73321099942b41be79a732c3ceb777dba79b3662e365318d124.png" />
+<img alt="_images/d9f63e1575ce942e982187eee682beb9350491f4fe6f27be54a7b543bb3e1ef6.png" src="_images/d9f63e1575ce942e982187eee682beb9350491f4fe6f27be54a7b543bb3e1ef6.png" />
 </div>
 </div>
 <p>The electric vehicles can only be charged when they are plugged-in. Below we load an availability profile
@@ -992,7 +995,7 @@ telling us what share of electric vehicles is plugged-in <strong>at home</strong
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;snapshot&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/8918cb2721e43a2487faec0740b03e7d99c5be9957db78b8435e1a9d98ce2ec5.png" src="_images/8918cb2721e43a2487faec0740b03e7d99c5be9957db78b8435e1a9d98ce2ec5.png" />
+<img alt="_images/d47f28473909a0b72730d874c5e8dcc409d61ad52633235c185f7936f33b6f97.png" src="_images/d47f28473909a0b72730d874c5e8dcc409d61ad52633235c185f7936f33b6f97.png" />
 </div>
 </div>
 <p>Then, we can add a link for the electric vehicle charger using assumption about the number of EVs and their charging rates.</p>
@@ -1077,7 +1080,7 @@ telling us what share of electric vehicles is plugged-in <strong>at home</strong
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;snapshot&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/7450d32bb1b36dd56006a05df390042b61b818b941867502a7f2d40a0be0e047.png" src="_images/7450d32bb1b36dd56006a05df390042b61b818b941867502a7f2d40a0be0e047.png" />
+<img alt="_images/0ccdf0007d3ba3038b3945bba390d383293cbe122b111e9c272e3b9d8422b974.png" src="_images/0ccdf0007d3ba3038b3945bba390d383293cbe122b111e9c272e3b9d8422b974.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1141,13 +1144,19 @@ Index([&#39;electrolysis&#39;, &#39;fuel cell&#39;, &#39;heat pump&#39;, &#39;re
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:   0%|          | 0/27 [00:00&lt;?, ?it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:  48%|████▊     | 13/27 [00:00&lt;00:00, 103.17it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:   4%|▎         | 1/27 [00:00&lt;00:02,  9.02it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:  89%|████████▉ | 24/27 [00:00&lt;00:00, 83.93it/s] 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:  48%|████▊     | 13/27 [00:00&lt;00:00, 62.72it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.: 100%|██████████| 27/27 [00:00&lt;00:00, 67.59it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:  74%|███████▍  | 20/27 [00:00&lt;00:00, 60.96it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:  96%|█████████▋| 26/27 [00:00&lt;00:00, 55.54it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.: 100%|██████████| 27/27 [00:00&lt;00:00, 52.09it/s]
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -1156,48 +1165,60 @@ Index([&#39;electrolysis&#39;, &#39;fuel cell&#39;, &#39;heat pump&#39;, &#39;re
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing continuous variables.:   0%|          | 0/11 [00:00&lt;?, ?it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing continuous variables.: 100%|██████████| 11/11 [00:00&lt;00:00, 146.40it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing continuous variables.: 100%|██████████| 11/11 [00:00&lt;00:00, 151.07it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.io: Writing time: 0.61s
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.io: Writing time: 0.49s
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.solvers:Log file at /tmp/highs.log
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.solvers:Log file at /tmp/highs.log.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running HiGHS 1.7.2 (git hash: 184e327): Copyright (c) 2024 HiGHS under MIT licence terms
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running HiGHS 1.5.3 [date: 2023-05-16, git hash: 594fa5a9d-dirty]
-Copyright (c) 2023 HiGHS under MIT licence terms
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.constants: Optimization successful: 
+Status: ok
+Termination condition: optimal
+Solution: 43811 primals, 94181 duals
+Objective: 1.21e+11
+Solver model: available
+Solver message: optimal
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:pypsa.optimization.optimize:The shadow-prices of the constraints Generator-ext-p-lower, Generator-ext-p-upper, Link-fix-p-lower, Link-fix-p-upper, Link-ext-p-lower, Link-ext-p-upper, Store-fix-e-lower, Store-fix-e-upper, Store-ext-e-lower, Store-ext-e-upper, StorageUnit-ext-p_dispatch-lower, StorageUnit-ext-p_dispatch-upper, StorageUnit-ext-p_store-lower, StorageUnit-ext-p_store-upper, StorageUnit-ext-state_of_charge-lower, StorageUnit-ext-state_of_charge-upper, StorageUnit-energy_balance, Store-energy_balance were not assigned to the network.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Coefficient ranges:
+  Matrix [1e-04, 6e+00]
+  Cost   [4e-02, 3e+05]
+  Bound  [0e+00, 0e+00]
+  RHS    [2e+03, 1e+08]
 Presolving model
-47129 rows, 42760 cols, 119487 nonzeros
-42749 rows, 34000 cols, 106347 nonzeros
-Presolve : Reductions: rows 42749(-51432); columns 34000(-9811); elements 106347(-61243)
+47129 rows, 42760 cols, 119487 nonzeros  0s
+40560 rows, 34001 cols, 104159 nonzeros  0s
+38370 rows, 29621 cols, 97589 nonzeros  0s
+Presolve : Reductions: rows 38370(-55811); columns 29621(-14190); elements 97589(-70001)
 Solving the presolved LP
 Using EKK dual simplex solver - serial
   Iteration        Objective     Infeasibilities num(sum)
-          0    -5.1304687500e+06 Ph1: 8758(9.8535e+06); Du: 2189(5130.47) 0s
-      22068     7.2044172220e+10 Pr: 6279(2.78895e+11); Du: 0(1.7237e-06) 5s
-      30752     1.2131406462e+11 7s
-Using EKK dual simplex solver - serial
-  Iteration        Objective     Infeasibilities num(sum)
-      30752     1.2129041226e+11 Pr: 1(8.59499e-06) 7s
-      30856     1.2129041006e+11 Pr: 0(0) 7s
-      30856     1.2129041006e+11 Pr: 0(0) 7s
+          0     0.0000000000e+00 Ph1: 0(0) 0s
+      21158     7.2645696784e+10 Pr: 6234(4.1166e+12); Du: 0(2.61714e-06) 5s
+      33754     1.2129041006e+11 Pr: 0(0); Du: 0(4.03079e-13) 9s
+      33754     1.2129041006e+11 Pr: 0(0); Du: 0(4.03079e-13) 9s
 Solving the original LP from the solution after postsolve
 Using EKK dual simplex solver - serial
   Iteration        Objective     Infeasibilities num(sum)
-      30856     1.2129041006e+11 Pr: 1432(0.0134378); Du: 0(2.19504e-08) 8s
-      32169     1.2129041006e+11 Pr: 2025(0.154681); Du: 0(4.15028e-08) 13s
-      32466     1.2129041006e+11 Pr: 1725(0.0577215); Du: 0(5.42686e-08) 18s
-      32647     1.2129041006e+11 Pr: 1523(0.0127137); Du: 0(5.76361e-08) 23s
-      32796     1.2129041006e+11 Pr: 1313(0.00323402); Du: 0(5.76358e-08) 28s
-      32857     1.2129041006e+11 Pr: 0(0) 30s
+      33754     1.2129041006e+11 Pr: 1256(0.000766981); Du: 0(2.89776e-08) 9s
+      37118     1.2129041006e+11 Pr: 0(0) 11s
 Model   status      : Optimal
-Simplex   iterations: 32857
+Simplex   iterations: 37118
 Objective value     :  1.2129041006e+11
-HiGHS run time      :         30.47
+HiGHS run time      :         11.48
+Writing the solution to /tmp/linopy-solve-5aj6vpha.sol
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;ok&#39;, &#39;optimal&#39;)
 </pre></div>
 </div>
 </div>
@@ -1209,6 +1230,259 @@ HiGHS run time      :         30.47
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>Optimal Capacity</th>
+      <th>Installed Capacity</th>
+      <th>Supply</th>
+      <th>Withdrawal</th>
+      <th>Dispatch</th>
+      <th>Transmission</th>
+      <th>Capacity Factor</th>
+      <th>Curtailment</th>
+      <th>Capital Expenditure</th>
+      <th>Operational Expenditure</th>
+      <th>Revenue</th>
+      <th>Market Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" valign="top">Generator</th>
+      <th>offwind</th>
+      <td>2.281124e+04</td>
+      <td>0.0</td>
+      <td>3.196011e+07</td>
+      <td>0.000000e+00</td>
+      <td>3.196011e+07</td>
+      <td>0.0</td>
+      <td>0.159939</td>
+      <td>4.053516e+07</td>
+      <td>3.606999e+09</td>
+      <td>6.392023e+05</td>
+      <td>3.607639e+09</td>
+      <td>112.879405</td>
+    </tr>
+    <tr>
+      <th>onwind</th>
+      <td>3.437762e+05</td>
+      <td>0.0</td>
+      <td>3.866098e+07</td>
+      <td>0.000000e+00</td>
+      <td>3.866098e+07</td>
+      <td>0.0</td>
+      <td>0.012838</td>
+      <td>5.809284e+08</td>
+      <td>3.303204e+10</td>
+      <td>5.219232e+07</td>
+      <td>3.308423e+10</td>
+      <td>855.752513</td>
+    </tr>
+    <tr>
+      <th>solar</th>
+      <td>7.594874e+05</td>
+      <td>0.0</td>
+      <td>4.245393e+08</td>
+      <td>0.000000e+00</td>
+      <td>4.245393e+08</td>
+      <td>0.0</td>
+      <td>0.063811</td>
+      <td>4.016830e+08</td>
+      <td>3.532292e+10</td>
+      <td>4.245393e+06</td>
+      <td>3.532716e+10</td>
+      <td>83.212930</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">Link</th>
+      <th>EV charger</th>
+      <td>4.400000e+05</td>
+      <td>440000.0</td>
+      <td>3.732941e+08</td>
+      <td>4.147712e+08</td>
+      <td>-4.147712e+07</td>
+      <td>0.0</td>
+      <td>0.107610</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>V2G</th>
+      <td>4.400000e+05</td>
+      <td>440000.0</td>
+      <td>2.241148e+08</td>
+      <td>2.490165e+08</td>
+      <td>-2.490165e+07</td>
+      <td>0.0</td>
+      <td>0.064606</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>electrolysis</th>
+      <td>7.810270e+04</td>
+      <td>0.0</td>
+      <td>4.789257e+08</td>
+      <td>6.841796e+08</td>
+      <td>-2.052539e+08</td>
+      <td>0.0</td>
+      <td>1.000000</td>
+      <td>0.000000e+00</td>
+      <td>3.905135e+09</td>
+      <td>0.000000e+00</td>
+      <td>3.905135e+09</td>
+      <td>8.153947</td>
+    </tr>
+    <tr>
+      <th>resistive heater</th>
+      <td>2.277568e+05</td>
+      <td>0.0</td>
+      <td>5.936692e+08</td>
+      <td>6.596325e+08</td>
+      <td>-6.596325e+07</td>
+      <td>0.0</td>
+      <td>0.330618</td>
+      <td>0.000000e+00</td>
+      <td>2.277568e+09</td>
+      <td>0.000000e+00</td>
+      <td>2.277568e+09</td>
+      <td>3.836426</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">Load</th>
+      <th>-</th>
+      <td>0.000000e+00</td>
+      <td>0.0</td>
+      <td>0.000000e+00</td>
+      <td>4.789257e+08</td>
+      <td>-4.789257e+08</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>-1.151077e+11</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>EV demand</th>
+      <td>0.000000e+00</td>
+      <td>0.0</td>
+      <td>0.000000e+00</td>
+      <td>1.242776e+08</td>
+      <td>-1.242776e+08</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>heat</th>
+      <td>0.000000e+00</td>
+      <td>0.0</td>
+      <td>0.000000e+00</td>
+      <td>5.936692e+08</td>
+      <td>-5.936692e+08</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>-2.277568e+09</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>hydrogen</th>
+      <td>0.000000e+00</td>
+      <td>0.0</td>
+      <td>0.000000e+00</td>
+      <td>4.789257e+08</td>
+      <td>-4.789257e+08</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>-3.905135e+09</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>StorageUnit</th>
+      <th>battery storage</th>
+      <td>4.468159e+05</td>
+      <td>0.0</td>
+      <td>1.908404e+08</td>
+      <td>2.070751e+08</td>
+      <td>-1.623469e+07</td>
+      <td>0.0</td>
+      <td>0.101662</td>
+      <td>0.000000e+00</td>
+      <td>4.308868e+10</td>
+      <td>0.000000e+00</td>
+      <td>4.308868e+10</td>
+      <td>225.783806</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Store</th>
+      <th>EV battery</th>
+      <td>1.000000e+06</td>
+      <td>1000000.0</td>
+      <td>2.760000e+08</td>
+      <td>2.760000e+08</td>
+      <td>0.000000e+00</td>
+      <td>0.0</td>
+      <td>0.126027</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>gas storage</th>
+      <td>1.000000e+08</td>
+      <td>100000000.0</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.0</td>
+      <td>1.000000</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1217,6 +1491,12 @@ HiGHS run time      :         30.47
 <span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: ylabel=&#39;bn€/a&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/9892681e846e4b7073e4bc9218fede00fbf838ab6fcae6bb3aa8473993ca7b09.png" src="_images/9892681e846e4b7073e4bc9218fede00fbf838ab6fcae6bb3aa8473993ca7b09.png" />
 </div>
 </div>
 </section>
@@ -1257,7 +1537,7 @@ HiGHS run time      :         30.47
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -1349,8 +1629,8 @@ By Fabian Neumann
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
