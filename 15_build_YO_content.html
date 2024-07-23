@@ -428,7 +428,7 @@ document.write(`
 <section class="tex2jax_ignore mathjax_ignore" id="educators-build-your-own-content">
 <h1><font color="red">Educators Build Your Own Content</font><a class="headerlink" href="#educators-build-your-own-content" title="Link to this heading">#</a></h1>
 <!-- ###### List of Abbreviation[^bignote] -->
-<p>This section assists academics, and alike, in build their content, by modifying this repository, or the original <a class="reference external" href="https://github.com/fneum/data-science-for-esm">Dr. F. Neumann’s repository</a>. Dr. Neumann’s repository is used as ane example in the figures below.</p>
+<p>This section helps academics, and alike, in building their own content, by modifying this repository, or the original <a class="reference external" href="https://github.com/fneum/data-science-for-esm">Dr. F. Neumann’s repository</a>. Dr. Neumann’s repository is used as ane example in the figures below.</p>
 <blockquote>
 <div><p><strong>Goal:</strong> <em>To create a course page for your own knowledge dissemination, like OET has done, follow this guide.</em></p>
 </div></blockquote>
@@ -569,7 +569,9 @@ is used for generating the required `HTML`, `css`, `.js`, as well as the other f
 <li><p>Please modify <code class="docutils literal notranslate"><span class="pre">*.ipynb</span></code> and <code class="docutils literal notranslate"><span class="pre">.md</span></code> files as seen fit. They are the core-content.</p></li>
 <li><p>Upon each content update, there is a chain of git to-do commands, resulting in the website update:</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span>
+<span class="c1"># make changes to content</span>
+<span class="n">git</span> <span class="n">status</span>
 <span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
 <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;new changes applied&#39;</span>
 <span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">stanford</span>
