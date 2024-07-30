@@ -199,18 +199,8 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Educators Build Your Own Content</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../BYOC/15_build_YO_content.html"><font color="red">Educators Build Your Own Content</font></a></li>
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../BYOC/15.0_build_YO_content.html">Introduction</a></li>
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../BYOC/15.1_create_fork.html">Create a new fork</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BYOC/01_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BYOC/07_ref.html">Further References and Citation</a></li>
 </ul>
 
     </div>
@@ -498,7 +488,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;output_COP30.tif&#39;, &lt;http.client.HTTPMessage at 0x7f7a48191d10&gt;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;output_COP30.tif&#39;, &lt;http.client.HTTPMessage at 0x7ff3b49a72d0&gt;)
 </pre></div>
 </div>
 </div>
@@ -640,84 +630,114 @@ document.write(`
 <span class="g g-Whitespace">    </span><span class="mi">275</span>         <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;CompilerPass implementations should return True/False. &quot;</span>
 <span class="g g-Whitespace">    </span><span class="mi">276</span>                <span class="s2">&quot;CompilerPass with name &#39;</span><span class="si">%s</span><span class="s2">&#39; did not.&quot;</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numba/core/typed_passes.py:497,</span> in <span class="ni">BaseNativeLowering.run_pass</span><span class="nt">(self, state)</span>
-<span class="g g-Whitespace">    </span><span class="mi">491</span>     <span class="n">state</span><span class="p">[</span><span class="s1">&#39;cr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_LowerResult</span><span class="p">(</span><span class="n">fndesc</span><span class="p">,</span> <span class="n">call_helper</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">492</span>                                <span class="n">cfunc</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">env</span><span class="o">=</span><span class="n">env</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">493</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">494</span>     <span class="c1"># Prepare for execution</span>
-<span class="g g-Whitespace">    </span><span class="mi">495</span>     <span class="c1"># Insert native function for use by other jitted-functions.</span>
-<span class="g g-Whitespace">    </span><span class="mi">496</span>     <span class="c1"># We also register its library to allow for inlining.</span>
-<span class="ne">--&gt; </span><span class="mi">497</span>     <span class="n">cfunc</span> <span class="o">=</span> <span class="n">targetctx</span><span class="o">.</span><span class="n">get_executable</span><span class="p">(</span><span class="n">library</span><span class="p">,</span> <span class="n">fndesc</span><span class="p">,</span> <span class="n">env</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">498</span>     <span class="n">targetctx</span><span class="o">.</span><span class="n">insert_user_function</span><span class="p">(</span><span class="n">cfunc</span><span class="p">,</span> <span class="n">fndesc</span><span class="p">,</span> <span class="p">[</span><span class="n">library</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">499</span>     <span class="n">state</span><span class="p">[</span><span class="s1">&#39;cr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_LowerResult</span><span class="p">(</span><span class="n">fndesc</span><span class="p">,</span> <span class="n">call_helper</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">500</span>                                <span class="n">cfunc</span><span class="o">=</span><span class="n">cfunc</span><span class="p">,</span> <span class="n">env</span><span class="o">=</span><span class="n">env</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numba/core/typed_passes.py:470,</span> in <span class="ni">BaseNativeLowering.run_pass</span><span class="nt">(self, state)</span>
+<span class="g g-Whitespace">    </span><span class="mi">468</span> <span class="n">lower</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">469</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">flags</span><span class="o">.</span><span class="n">no_cpython_wrapper</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">470</span>     <span class="n">lower</span><span class="o">.</span><span class="n">create_cpython_wrapper</span><span class="p">(</span><span class="n">flags</span><span class="o">.</span><span class="n">release_gil</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">472</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">flags</span><span class="o">.</span><span class="n">no_cfunc_wrapper</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">473</span>     <span class="c1"># skip cfunc wrapper generation if unsupported</span>
+<span class="g g-Whitespace">    </span><span class="mi">474</span>     <span class="c1"># argument or return types are used</span>
+<span class="g g-Whitespace">    </span><span class="mi">475</span>     <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">state</span><span class="o">.</span><span class="n">args</span><span class="p">:</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numba/core/cpu.py:239,</span> in <span class="ni">CPUContext.get_executable</span><span class="nt">(self, library, fndesc, env)</span>
-<span class="g g-Whitespace">    </span><span class="mi">226</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">227</span><span class="sd"> Returns</span>
-<span class="g g-Whitespace">    </span><span class="mi">228</span><span class="sd"> -------</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">236</span><span class="sd">     an execution environment (from _dynfunc)</span>
-<span class="g g-Whitespace">    </span><span class="mi">237</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">238</span> <span class="c1"># Code generation</span>
-<span class="ne">--&gt; </span><span class="mi">239</span> <span class="n">fnptr</span> <span class="o">=</span> <span class="n">library</span><span class="o">.</span><span class="n">get_pointer_to_function</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">240</span>     <span class="n">fndesc</span><span class="o">.</span><span class="n">llvm_cpython_wrapper_name</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">242</span> <span class="c1"># Note: we avoid reusing the original docstring to avoid encoding</span>
-<span class="g g-Whitespace">    </span><span class="mi">243</span> <span class="c1"># issues on Python 2, see issue #1908</span>
-<span class="g g-Whitespace">    </span><span class="mi">244</span> <span class="n">doc</span> <span class="o">=</span> <span class="s2">&quot;compiled wrapper for </span><span class="si">%r</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">fndesc</span><span class="o">.</span><span class="n">qualname</span><span class="p">,)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numba/core/lowering.py:282,</span> in <span class="ni">BaseLower.create_cpython_wrapper</span><span class="nt">(self, release_gil)</span>
+<span class="g g-Whitespace">    </span><span class="mi">277</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">genlower</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">278</span>     <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">create_cpython_wrapper</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">library</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">279</span>                                         <span class="bp">self</span><span class="o">.</span><span class="n">genlower</span><span class="o">.</span><span class="n">gendesc</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">280</span>                                         <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">call_helper</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">281</span>                                         <span class="n">release_gil</span><span class="o">=</span><span class="n">release_gil</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">282</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">create_cpython_wrapper</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">library</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fndesc</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">283</span>                                     <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">call_helper</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">284</span>                                     <span class="n">release_gil</span><span class="o">=</span><span class="n">release_gil</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numba/core/codegen.py:989,</span> in <span class="ni">JITCodeLibrary.get_pointer_to_function</span><span class="nt">(self, name)</span>
-<span class="g g-Whitespace">    </span><span class="mi">975</span> <span class="k">def</span> <span class="nf">get_pointer_to_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">976</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">977</span><span class="sd">     Generate native code for function named *name* and return a pointer</span>
-<span class="g g-Whitespace">    </span><span class="mi">978</span><span class="sd">     to the start of the function (as an integer).</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">987</span><span class="sd">         - non-zero if the symbol is defined.</span>
-<span class="g g-Whitespace">    </span><span class="mi">988</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">989</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_ensure_finalized</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">990</span>     <span class="n">ee</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_codegen</span><span class="o">.</span><span class="n">_engine</span>
-<span class="g g-Whitespace">    </span><span class="mi">991</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">ee</span><span class="o">.</span><span class="n">is_symbol_defined</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numba/core/cpu.py:190,</span> in <span class="ni">CPUContext.create_cpython_wrapper</span><span class="nt">(self, library, fndesc, env, call_helper, release_gil)</span>
+<span class="g g-Whitespace">    </span><span class="mi">185</span> <span class="n">wrapper_callee</span> <span class="o">=</span> <span class="n">ir</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="n">wrapper_module</span><span class="p">,</span> <span class="n">fnty</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">186</span>                              <span class="n">fndesc</span><span class="o">.</span><span class="n">llvm_func_name</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">187</span> <span class="n">builder</span> <span class="o">=</span> <span class="n">PyCallWrapper</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wrapper_module</span><span class="p">,</span> <span class="n">wrapper_callee</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">188</span>                         <span class="n">fndesc</span><span class="p">,</span> <span class="n">env</span><span class="p">,</span> <span class="n">call_helper</span><span class="o">=</span><span class="n">call_helper</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">189</span>                         <span class="n">release_gil</span><span class="o">=</span><span class="n">release_gil</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">190</span> <span class="n">builder</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">191</span> <span class="n">library</span><span class="o">.</span><span class="n">add_ir_module</span><span class="p">(</span><span class="n">wrapper_module</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numba/core/codegen.py:567,</span> in <span class="ni">CodeLibrary._ensure_finalized</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">565</span> <span class="k">def</span> <span class="nf">_ensure_finalized</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">566</span>     <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_finalized</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">567</span>         <span class="bp">self</span><span class="o">.</span><span class="n">finalize</span><span class="p">()</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numba/core/callwrapper.py:122,</span> in <span class="ni">PyCallWrapper.build</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">119</span> <span class="n">kws</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;py_kws&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">121</span> <span class="n">api</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">get_python_api</span><span class="p">(</span><span class="n">builder</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">122</span> <span class="bp">self</span><span class="o">.</span><span class="n">build_wrapper</span><span class="p">(</span><span class="n">api</span><span class="p">,</span> <span class="n">builder</span><span class="p">,</span> <span class="n">closure</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kws</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">124</span> <span class="k">return</span> <span class="n">wrapper</span><span class="p">,</span> <span class="n">api</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numba/core/codegen.py:762,</span> in <span class="ni">CPUCodeLibrary.finalize</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">756</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_final_module</span><span class="o">.</span><span class="n">link_in</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">757</span>             <span class="n">library</span><span class="o">.</span><span class="n">_get_module_for_linking</span><span class="p">(),</span> <span class="n">preserve</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">758</span>         <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">760</span> <span class="c1"># Optimize the module after all dependences are linked in above,</span>
-<span class="g g-Whitespace">    </span><span class="mi">761</span> <span class="c1"># to allow for inlining.</span>
-<span class="ne">--&gt; </span><span class="mi">762</span> <span class="bp">self</span><span class="o">.</span><span class="n">_optimize_final_module</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">764</span> <span class="bp">self</span><span class="o">.</span><span class="n">_final_module</span><span class="o">.</span><span class="n">verify</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">765</span> <span class="bp">self</span><span class="o">.</span><span class="n">_finalize_final_module</span><span class="p">()</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numba/core/callwrapper.py:158,</span> in <span class="ni">PyCallWrapper.build_wrapper</span><span class="nt">(self, api, builder, closure, args, kws)</span>
+<span class="g g-Whitespace">    </span><span class="mi">156</span>         <span class="n">innerargs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">157</span>     <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">158</span>         <span class="n">val</span> <span class="o">=</span> <span class="n">cleanup_manager</span><span class="o">.</span><span class="n">add_arg</span><span class="p">(</span><span class="n">builder</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">obj</span><span class="p">),</span> <span class="n">ty</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">159</span>         <span class="n">innerargs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">161</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">release_gil</span><span class="p">:</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numba/core/codegen.py:682,</span> in <span class="ni">CPUCodeLibrary._optimize_final_module</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">679</span> <span class="n">full_name</span> <span class="o">=</span> <span class="s2">&quot;Module passes (full optimization)&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">680</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_recorded_timings</span><span class="o">.</span><span class="n">record</span><span class="p">(</span><span class="n">full_name</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">681</span>     <span class="c1"># The full optimisation suite is then run on the refop pruned IR</span>
-<span class="ne">--&gt; </span><span class="mi">682</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_codegen</span><span class="o">.</span><span class="n">_mpm_full</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_final_module</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numba/core/callwrapper.py:58,</span> in <span class="ni">_ArgManager.add_arg</span><span class="nt">(self, obj, ty)</span>
+<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="n">cleanupblk</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">append_basic_block</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span>     <span class="s2">&quot;arg</span><span class="si">%d</span><span class="s2">.err&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">arg_count</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">goto_block</span><span class="p">(</span><span class="n">cleanupblk</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">58</span>     <span class="n">cleanup_arg</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">59</span>     <span class="c1"># Go to next cleanup block</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span>     <span class="bp">self</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">branch</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nextblk</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/llvmlite/binding/passmanagers.py:698,</span> in <span class="ni">ModulePassManager.run</span><span class="nt">(self, module, remarks_file, remarks_format, remarks_filter)</span>
-<span class="g g-Whitespace">    </span><span class="mi">683</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">684</span><span class="sd"> Run optimization passes on the given module.</span>
-<span class="g g-Whitespace">    </span><span class="mi">685</span><span class="sd"> </span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">695</span><span class="sd">     The filter that should be applied to the remarks output.</span>
-<span class="g g-Whitespace">    </span><span class="mi">696</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">697</span> <span class="k">if</span> <span class="n">remarks_file</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">698</span>     <span class="k">return</span> <span class="n">ffi</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">LLVMPY_RunPassManager</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">699</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">700</span>     <span class="n">r</span> <span class="o">=</span> <span class="n">ffi</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">LLVMPY_RunPassManagerWithRemarks</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span>         <span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">,</span> <span class="n">_encode_string</span><span class="p">(</span><span class="n">remarks_format</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span>         <span class="n">_encode_string</span><span class="p">(</span><span class="n">remarks_filter</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span>         <span class="n">_encode_string</span><span class="p">(</span><span class="n">remarks_file</span><span class="p">))</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numba/core/callwrapper.py:50,</span> in <span class="ni">_ArgManager.add_arg.&lt;locals&gt;.cleanup_arg</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="c1"># NRT cleanup</span>
+<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="c1"># (happens after the native value cleanup as the latter</span>
+<span class="g g-Whitespace">     </span><span class="mi">48</span> <span class="c1">#  may need the native value)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">enable_nrt</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">50</span>     <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">nrt</span><span class="o">.</span><span class="n">decref</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">builder</span><span class="p">,</span> <span class="n">ty</span><span class="p">,</span> <span class="n">native</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/llvmlite/binding/ffi.py:192,</span> in <span class="ni">_lib_fn_wrapper.__call__</span><span class="nt">(self, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">190</span> <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">191</span>     <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">192</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cfn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numba/core/runtime/context.py:388,</span> in <span class="ni">NRTContext.decref</span><span class="nt">(self, builder, typ, value)</span>
+<span class="g g-Whitespace">    </span><span class="mi">384</span> <span class="k">def</span> <span class="nf">decref</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">builder</span><span class="p">,</span> <span class="n">typ</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">385</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">386</span><span class="sd">     Recursively decref the given *value* and its members.</span>
+<span class="g g-Whitespace">    </span><span class="mi">387</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">388</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_call_incref_decref</span><span class="p">(</span><span class="n">builder</span><span class="p">,</span> <span class="n">typ</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="s2">&quot;NRT_decref&quot;</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numba/core/runtime/context.py:367,</span> in <span class="ni">NRTContext._call_incref_decref</span><span class="nt">(self, builder, typ, value, funcname)</span>
+<span class="g g-Whitespace">    </span><span class="mi">363</span> <span class="bp">self</span><span class="o">.</span><span class="n">_require_nrt</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">365</span> <span class="kn">from</span> <span class="nn">numba.core.runtime.nrtdynmod</span> <span class="kn">import</span> <span class="n">incref_decref_ty</span>
+<span class="ne">--&gt; </span><span class="mi">367</span> <span class="n">meminfos</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_meminfos</span><span class="p">(</span><span class="n">builder</span><span class="p">,</span> <span class="n">typ</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">368</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">mi</span> <span class="ow">in</span> <span class="n">meminfos</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">369</span>     <span class="n">mod</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">module</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numba/core/runtime/context.py:346,</span> in <span class="ni">NRTContext.get_meminfos</span><span class="nt">(self, builder, ty, val)</span>
+<span class="g g-Whitespace">    </span><span class="mi">343</span> <span class="k">def</span> <span class="nf">get_meminfos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">builder</span><span class="p">,</span> <span class="n">ty</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">344</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Return a list of *(type, meminfo)* inside the given value.</span>
+<span class="g g-Whitespace">    </span><span class="mi">345</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">346</span>     <span class="n">datamodel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_context</span><span class="o">.</span><span class="n">data_model_manager</span><span class="p">[</span><span class="n">ty</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">347</span>     <span class="n">members</span> <span class="o">=</span> <span class="n">datamodel</span><span class="o">.</span><span class="n">traverse</span><span class="p">(</span><span class="n">builder</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">349</span>     <span class="n">meminfos</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numba/core/datamodel/manager.py:43,</span> in <span class="ni">DataModelManager.__getitem__</span><span class="nt">(self, fetype)</span>
+<span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fetype</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Shorthand for lookup()</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">43</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lookup</span><span class="p">(</span><span class="n">fetype</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numba/core/datamodel/manager.py:33,</span> in <span class="ni">DataModelManager.lookup</span><span class="nt">(self, fetype)</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Returns the corresponding datamodel given the frontend-type instance</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">33</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">fetype</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">34</span> <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">35</span>     <span class="k">pass</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/weakref.py:415,</span> in <span class="ni">WeakKeyDictionary.__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">    </span><span class="mi">414</span> <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">415</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">ref</span><span class="p">(</span><span class="n">key</span><span class="p">)]</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numba/core/types/abstract.py:122,</span> in <span class="ni">Type.__hash__</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">121</span> <span class="k">def</span> <span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">122</span>     <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">key</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numba/core/types/npytypes.py:482,</span> in <span class="ni">Array.key</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">478</span>         <span class="n">readonly</span> <span class="o">=</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">mutable</span>
+<span class="g g-Whitespace">    </span><span class="mi">479</span>     <span class="k">return</span> <span class="n">Array</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="n">ndim</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="n">readonly</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">480</span>                  <span class="n">aligned</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">aligned</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">482</span> <span class="nd">@property</span>
+<span class="g g-Whitespace">    </span><span class="mi">483</span> <span class="k">def</span> <span class="nf">key</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">484</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ndim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mutable</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">aligned</span>
+<span class="g g-Whitespace">    </span><span class="mi">486</span> <span class="k">def</span> <span class="nf">unify</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">typingctx</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
