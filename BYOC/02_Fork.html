@@ -188,7 +188,8 @@
 <li class="toctree-l1"><a class="reference internal" href="04_Deploy.html">4. Deployment Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="05_Content.html">5. Content Modification Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06_Workflow.html">6. GitHub Workflow Deployment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="07_Ref.html">7. Further References and Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_Ref.html">7. References</a></li>
+
 </ul>
 
     </div>
@@ -402,25 +403,25 @@ Before forking this repository please have the following in mind: -->
     <a href='https://github.com/fneum/data-science-for-esm/fork'>
     <img src='https://github.com/open-energy-transition/data-science-for-esm/raw/stanford/data-science-for-esm/_images/03_fork_option.png' alt='' width='95%' style='vertical-align:middle;border:5px solid goldenrod;margin:20px 0px' />
     </a>
-    <figcaption>Clicking on the image above will lead directly to the <strong><b><mark>Create a new fork</mark></b></strong> menu</figcaption>
+    <figcaption>Clicking on the image above will lead directly to the <strong><b><mark>Create a new fork</mark></b></strong></figcaption>
 </figure>
 </center>
 </div>
 <blockquote>
-<div><p><strong>Note:</strong> The key point is to have/keep the <code class="docutils literal notranslate"><span class="pre">stanford</span></code> branch in your fork. This is fully tested using the <code class="docutils literal notranslate"><span class="pre">stanford</span></code> branch</p>
+<div><p><strong>Note:</strong> The key point is to have at least one branch, other than <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>, in your fork. This has been tested using both the <code class="docutils literal notranslate"><span class="pre">main</span></code> and the <code class="docutils literal notranslate"><span class="pre">side</span> <span class="pre">branches</span></code>.</p>
 </div></blockquote>
 <p>In this workflow:</p>
 <ul class="simple">
-<li><p>Your source code is in the <code class="docutils literal notranslate"><span class="pre">stanford</span></code> branch</p></li>
-<li><p>Your published website is in the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch</p></li>
-<li><p>Alternatively, the <code class="docutils literal notranslate"><span class="pre">stanford</span></code> branch can be created locally:</p></li>
+<li><p>Published website is in the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch</p></li>
+<li><p>Source code is in a arbitrary <code class="docutils literal notranslate"><span class="pre">branch</span></code> defined by the user - any other than <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code></p></li>
+<li><p>The arbitrary <code class="docutils literal notranslate"><span class="pre">branch</span></code> can be created locally:</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">switch</span> <span class="o">-</span><span class="n">c</span> <span class="n">stanford</span>
-<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">stanford</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">switch</span> <span class="o">-</span><span class="n">c</span> <span class="n">branch</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">branch</span>
 </pre></div>
 </div>
+<!-- * However, this is to be skipped if adhering to the **Note** above. -->
 <ul class="simple">
-<li><p>However, this is to be skipped if adhering to the <strong>Note</strong> above.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch will be automatically generated, as defined by the workflow, hence its creation is not required.</p></li>
 <li><p>It is also <strong>not</strong> required to have the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> locally, once generated, as it hosts only the static site build files, which are taken care of by the workflow.</p></li>
 </ul>
