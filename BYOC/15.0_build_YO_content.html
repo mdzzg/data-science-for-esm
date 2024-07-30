@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Requirements &#8212; Data Science for Energy System Modelling</title>
+    <title>Introduction &#8212; Data Science for Energy System Modelling</title>
   
   
   
@@ -205,7 +205,7 @@
 
 
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Requirements</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction</a></li>
 
 
 
@@ -396,7 +396,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Requirements</h1>
+    <h1>Introduction</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -406,14 +406,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Requirements</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#github-pages-setup">GitHub Pages Setup</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment-setup">Deployment Setup</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#content-modification-setup">Content Modification Setup</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#github-workflow-deployment">GitHub Workflow Deployment</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relevant-references-for-further-reading">Relevant References for further reading</a></li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#github-workflow-deployment">GitHub Workflow Deployment</a></li>
 </ul>
 
             </nav>
@@ -432,28 +432,26 @@ document.write(`
 1. [New Fork](#creating-a-new-fork)
 1. [GH Pages](#gh-pages-setup)
 1. [GH Workflows Deployment](#gh-workflows-deployment) -->
-<!-- 
-<font color="red">Educators Build Your Own Content</font>
-=========================================================
+<section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h1>
 <!-- ###### List of Abbreviation[^bignote] -->
-<p>This section helps academics, and alike, in building their own content, by modifying this repository, or the original <a class="reference external" href="https://github.com/fneum/data-science-for-esm">Dr. F. Neumann’s repository</a>. Dr. Neumann’s repository is used as ane example in the figures below.</p>
+<p>This section helps academics, and alike, in building their own content, by modifying this repository. This repository is used as ane example in the figures below.</p>
 <blockquote>
-<div><p><strong>Goal:</strong> <em>To create a course page for your own knowledge dissemination, like OET has done, follow this guide.</em></p>
+<div><p><strong>Goal:</strong> <em>To create a course page for your own knowledge dissemination, like this one, follow this guide.</em></p>
 </div></blockquote>
 <ul class="simple">
-<li><p>Its primary purpose is guidance on how to generate a GitHub page, to be used for learning material, i.e. lectures, or similar.</p></li>
+<li><p>Its primary purpose is to guide you on how to generate a GitHub page, to be used for learning material, i.e. lectures, or similar.</p></li>
 <li><p>It can also be purpose for anything else, for that matter.</p></li>
-<li><p>This setup draws from the <a class="reference external" href="https://github.com/peaceiris/actions-gh-pages">peaceiris actions-gh-pages</a>, in specific using the [Static Site Generator with Python][17].</p>
+<li><p>This setup draws from the <a class="reference external" href="https://github.com/peaceiris/actions-gh-pages">peaceiris actions-gh-pages</a>, in specific using the <a class="reference external" href="https://github.com/peaceiris/actions-gh-pages?tab=readme-ov-file#%EF%B8%8F-static-site-generators-with-python">Static Site Generator with Python</a>.</p>
 <ul>
 <li><p><em>This serves only as a reference, as the the full explanation is below.</em></p></li>
 </ul>
 </li>
 </ul>
-<p>By following these instructions, one is able to create his own website, alike this one, with a tailor-made content, quickly and with ease. However, there are two or three things to keep in mind when doing so. Please read on.
-–&gt;</p>
+<p>By following these instructions, one is able to create his own website, alike this one, with a tailor-made content, quickly and with ease. Albeit, there are two or three things to keep in mind when doing so. Please read on.</p>
 <section id="requirements">
-<h1>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h1>
-<p>Please keep in mind that that for a successful workflow run, the <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/e52f7980165928a7cd90826ee0bf8cd3fb407892/environment.yaml">correct python environment</a>, with all the <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/e52f7980165928a7cd90826ee0bf8cd3fb407892/requirements.txt">python package dependencies</a> satisfied, is required. Our suggestion is the package manager <code class="docutils literal notranslate"><span class="pre">conda</span></code> or <code class="docutils literal notranslate"><span class="pre">mamba</span></code>, for which further details, and installation instructions, are provided in the <a class="reference external" href="https://pypsa-earth.readthedocs.io/en/latest/installation.html">documentation of PyPSA-Earth creators</a>.</p>
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h2>
+<p>Have in mind that that for a successful workflow run, the <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/e52f7980165928a7cd90826ee0bf8cd3fb407892/environment.yaml">correct python environment</a>, with all the <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/e52f7980165928a7cd90826ee0bf8cd3fb407892/requirements.txt">python package dependencies</a> satisfied, is required. Our suggestion is the package manager <code class="docutils literal notranslate"><span class="pre">conda</span></code> or <code class="docutils literal notranslate"><span class="pre">mamba</span></code>, for which further details, and installation instructions, are provided in the <a class="reference external" href="https://pypsa-earth.readthedocs.io/en/latest/installation.html">documentation of PyPSA-Earth creators</a>.</p>
 <ul class="simple">
 <li><p>Please also keep in mind that there is no need for the usual:</p></li>
 </ul>
@@ -471,6 +469,7 @@ document.write(`
 </div>
 <p>Python and <code class="docutils literal notranslate"><span class="pre">*.ipynb</span></code> are optimally used in an <a class="reference external" href="https://github.com/microsoft/vscode">IDE</a>. Our recommendation is VSCode, used by the <a class="reference external" href="https://pypsa-earth.readthedocs.io/en/latest/installation.html">PyPSA developers</a>, due to its ease of use, and being open-source.</p>
 <hr class="docutils" />
+</section>
 </section>
 <hr class="docutils" />
 <section class="tex2jax_ignore mathjax_ignore" id="github-pages-setup">
@@ -571,42 +570,6 @@ you should be able to see the changes taking place in the specified <code class=
     <figcaption>Successful deployment, after a finalized <code>jupyter book build</code> run</figcaption>
 </figure>
 </center>
-<section id="relevant-references-for-further-reading">
-<h2>Relevant References for further reading<a class="headerlink" href="#relevant-references-for-further-reading" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Jupyter-book</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/start/build.html">https://jupyterbook.org/en/stable/start/build.html</a></p></li>
-<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/structure/toc.html">https://jupyterbook.org/en/stable/structure/toc.html</a></p></li>
-</ul>
-</li>
-<li><p>PyPSA-Earth:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://pypsa-eur.readthedocs.io/en/latest/introduction.html">https://pypsa-eur.readthedocs.io/en/latest/introduction.html</a></p></li>
-</ul>
-</li>
-<li><p>Open Energy Transition</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://openenergytransition.org/about-us.html#theory-of-change">https://openenergytransition.org/about-us.html#theory-of-change</a></p></li>
-<li><p><a class="reference external" href="https://open-energy-transition.github.io/handbook/">https://open-energy-transition.github.io/handbook/</a></p></li>
-</ul>
-</li>
-<li><p>Data Science for Energy System Modelling</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.tu.berlin/ensys">https://www.tu.berlin/ensys</a></p></li>
-<li><p><a class="reference external" href="https://fneum.github.io/data-science-for-esm/09-workshop-pypsa.html">https://fneum.github.io/data-science-for-esm/09-workshop-pypsa.html</a></p></li>
-<li><p><a class="reference external" href="https://moseskonto.tu-berlin.de/moses/modultransfersystem/bolognamodule/beschreibung/anzeigen.html;jsessionid=DQfixqzzpn1XIg5N1GG7S9um4EDykZn99AHmH6Fj.moseskonto?number=31027&amp;amp;version=1&amp;amp;sprache=2">https://moseskonto.tu-berlin.de/moses/modultransfersystem/bolognamodule/beschreibung/anzeigen.html;jsessionid=DQfixqzzpn1XIg5N1GG7S9um4EDykZn99AHmH6Fj.moseskonto?number=31027&amp;version=1&amp;sprache=2</a></p></li>
-</ul>
-</li>
-<li><p>Dr. Fabian Neumann</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.neumann.fyi/">https://www.neumann.fyi/</a></p></li>
-</ul>
-</li>
-</ol>
-<!-- <mark style="background-color: peachpuff; color: black"> -->
-<p><em>Kindly <a class="reference external" href="https://open-energy-transition.github.io/data-science-for-esm/00_intro.html">reference</a> us, in case using our materials, e.g. the workflow presented here.
-This way, your success is our success also.</em></p>
 <!-- # Internal Doc References -->
 <!-- <center><mark>Table of Abbreviations</mark></center> -->
 <!-- ###### Table of Abbreviations -->
@@ -617,7 +580,6 @@ This way, your success is our success also.</em></p>
 <p>The workflow has been successfully tested using the <code class="docutils literal notranslate"><span class="pre">stanford</span></code> branch, while, when using the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch, we experienced some issues, which are currently being investigated.</p>
 </aside>
 </aside>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -684,14 +646,14 @@ This way, your success is our success also.</em></p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Requirements</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#github-pages-setup">GitHub Pages Setup</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment-setup">Deployment Setup</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#content-modification-setup">Content Modification Setup</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#github-workflow-deployment">GitHub Workflow Deployment</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relevant-references-for-further-reading">Relevant References for further reading</a></li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#github-workflow-deployment">GitHub Workflow Deployment</a></li>
 </ul>
 
   </nav></div>
