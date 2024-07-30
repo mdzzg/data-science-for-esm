@@ -392,7 +392,7 @@ document.write(`
 
 Before forking this repository please have the following in mind: -->
 <ul class="simple">
-<li><p>In the <strong><b><mark>Create a new fork</mark></b></strong> pop-up menu, shown in the figure below, <ins>deselect</ins> the default <strong>Copy the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch only</strong> option.</p></li>
+<li><p>In the <strong><b><mark>Create a new fork</mark></b></strong> pop-up menu, shown in the figure below, <em><ins>deselect</ins></em> the default <strong>Copy the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch only</strong> option.</p></li>
 </ul>
 <p>By doing so, you will reduce further branch creation, required by the workflow.</p>
 <div class="admonition note">
@@ -425,9 +425,9 @@ Before forking this repository please have the following in mind: -->
 <li><p>It is also <strong>not</strong> required to have the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> locally, once generated, as it hosts only the static site build files, which are taken care of by the workflow.</p></li>
 </ul>
 <blockquote>
-<div><p><strong>Note:</strong> The remote <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>, itself, hosts the required <code class="docutils literal notranslate"><span class="pre">HTML</span></code>, <code class="docutils literal notranslate"><span class="pre">css</span></code>, <code class="docutils literal notranslate"><span class="pre">.js</span></code>, and the other files, used for generating the <code class="docutils literal notranslate"><span class="pre">github.io</span></code> website. Hence, there is no requirement for having the branch locally.</p>
+<div><p><strong>Note:</strong> The remote <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>, itself, hosts the required <code class="docutils literal notranslate"><span class="pre">HTML</span></code>, <code class="docutils literal notranslate"><span class="pre">css</span></code>, <code class="docutils literal notranslate"><span class="pre">.js</span></code>, and the other files, used for generating the <code class="docutils literal notranslate"><span class="pre">github.io</span></code> website. There is no requirement in having this branch locally.</p>
 </div></blockquote>
-<p>These will be re-generated, upon a successful workflow execution, every time <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> is performed, in the prior specified git branch. Branch specification is provided in the <a class="reference internal" href="#./04_deploy.md#deployment-setup"><span class="xref myst">Deployment Setup</span></a>.</p>
+<p>These will be re-generated, upon a successful workflow execution, every time <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> is performed, in the prior specified git branch. Branch specification is provided in the <a class="reference internal" href="04_Deploy.html#deployment-setup"><span class="std std-ref">Deployment Setup</span></a>.</p>
 <!-- of the forked repository, in the `.github/workflows/deploy.yml` ([link][07]) file which will contain the required `HTML`, `css`, `.js`, and other files
 is used for generating the required `HTML`, `css`, `.js`, as well as the other files - other than the `gh-pages`
 

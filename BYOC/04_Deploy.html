@@ -391,13 +391,13 @@ document.write(`
 <blockquote>
 <div><p><strong>Note:</strong> The key point is to set the correct deployment branch in the <code>./github/workflows/deploy.yml</code>.</p>
 </div></blockquote>
-<p>In the <code>.github/workflows/deploy.yml</code> [file][deploy] please specify the branch, later to be used by the workflow. Upon the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> command to the specified branch, the workflow will be triggered:</p>
+<p>In the <code>.github/workflows/deploy.yml</code> <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/ef394898e3100e2bd2d074a8b2da89235355cd4e/.github/workflows/deploy.yml#L4-L7">file</a> please specify the branch, later to be used by the workflow. Upon the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> command to the specified branch, the workflow will be triggered:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">push</span><span class="p">:</span>
       <span class="n">branches</span><span class="p">:</span>
       <span class="o">-</span> <span class="n">stanford</span>
 </pre></div>
 </div>
-<p>The specified <code class="docutils literal notranslate"><span class="pre">branch</span></code> can be any[^1], other than the <ins><code class="docutils literal notranslate"><span class="pre">gh-pages</span></code></ins>.</p>
+<p>The specified <code class="docutils literal notranslate"><span class="pre">branch</span></code> can be any<a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, other than the <ins><code class="docutils literal notranslate"><span class="pre">gh-pages</span></code></ins>.</p>
 <p>This setup uses the <code class="docutils literal notranslate"><span class="pre">stanford</span></code> branch for our workflow, but it can also be the <code class="docutils literal notranslate"><span class="pre">main</span></code>, or any other newly created branch. Upon the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>, the <a class="reference internal" href="#github-workflow-deployment"><span class="xref myst">workflow</span></a> will be triggered.</p>
 <p>The deployment itself is the <code class="docutils literal notranslate"><span class="pre">jupyter-build</span> <span class="pre">book</span> <span class="pre">data-science-for-esm/</span></code> <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/b1ab15c6d99fb325ca3877b0d33578a42669c3b7/.github/workflows/deploy.yml#L37">command</a>. This command is generating the HTML code from the data provided in the data-science-for-esm [folder][16].</p>
 <p>Further explanation of this command, i.e. <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code>, as well as the other commands is provided in the <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/37c3ef84651a12ee947573dfedd6c4b7786731bc/README.md">README.md</a> file. A more detailed explanation is to be found at the following <strong>References:</strong></p>
@@ -406,6 +406,14 @@ document.write(`
 <li><p><a class="reference external" href="https://jupyterbook.org/en/stable/basics/build.html">Build from the command line</a></p></li>
 <li><p><a class="reference external" href="https://jupyterbook.org/en/stable/structure/toc.html">Structure the Table of Contents</a></p></li>
 </ol>
+<!-- # Internal Doc References -->
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>The workflow has been successfully tested using the <code class="docutils literal notranslate"><span class="pre">stanford</span></code> branch, while, when using the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch, we experienced some issues, which are currently being investigated.</p>
+</aside>
+</aside>
 </section>
 
     <script type="text/x-thebe-config">
