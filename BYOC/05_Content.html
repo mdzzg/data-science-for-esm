@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>5. Content Modification Setup &#8212; Data Science for Energy System Modelling</title>
+    <title>5. Modify Content &#8212; Data Science for Energy System Modelling</title>
   
   
   
@@ -62,7 +62,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="6. GitHub Workflow Deployment" href="06_Workflow.html" />
-    <link rel="prev" title="4. Deployment Setup" href="04_Deploy.html" />
+    <link rel="prev" title="4. Deployment Settings" href="04_Deploy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,12 +184,11 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="01_Intro.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_Fork.html">2. Create a New Fork</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_GH_Pages.html">3. GitHub Pages Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_Deploy.html">4. Deployment Setup</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Content Modification Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_GH_Pages.html">3. GitHub Pages Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_Deploy.html">4. Deployment Settings</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Modify Content</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06_Workflow.html">6. GitHub Workflow Deployment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="07_Ref.html">7. References</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="07_Ref.html">7. Further Reading and Citation</a></li>
 </ul>
 
     </div>
@@ -373,7 +372,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Content Modification Setup</h1>
+    <h1>Modify Content</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -387,21 +386,31 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="content-modification-setup">
-<h1><span class="section-number">5. </span>Content Modification Setup<a class="headerlink" href="#content-modification-setup" title="Link to this heading">#</a></h1>
-<p>Use the provided files as templates. This will assist you in content creating, reducing the time in searching for the answers.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="modify-content">
+<h1><span class="section-number">5. </span>Modify Content<a class="headerlink" href="#modify-content" title="Link to this heading">#</a></h1>
+<p>Use these files as the template of your content. They will reduce the development time for your subject matter.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code> builds Jupyter Book off of <mark>Jupyter Notebook</mark> and <mark>markdown</mark> files.</p>
+<!-- > <br />
+\ -->
 <blockquote>
-<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code> builds content from the <em>markdown</em> and jupyter notebook files, hence their content needs modifying.</p>
+<div><p>For the full list of the available file formats go to <a class="reference external" href="https://jupyterbook.org/en/stable/file-types/index.html">JupyterBook</a>.</p>
 </div></blockquote>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Jupyter Notebook files can contain markdown. For more refer to <a class="reference external" href="https://executablebooks.github.io/cookiecutter-jupyter-book/notebooks.html">MyST</a>.</p>
+</div>
 <ul class="simple">
 <li><p>The website logo, as well as the other figures can be placed in the <code class="docutils literal notranslate"><span class="pre">data-science-for-esm/_images/</span></code> folder.</p></li>
-<li><p>Please keep in mind that, when changing images and modifying files, the referencing throughout <code class="docutils literal notranslate"><span class="pre">.md</span></code> and <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files needs changing as well.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> and <code class="docutils literal notranslate"><span class="pre">.md</span></code> content files are to be located in the root of the <code class="docutils literal notranslate"><span class="pre">data-science-for--esm</span></code> folder, and specified in the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>.</p>
+<li><p>When changing images and modifying files, the referencing throughout the <code class="docutils literal notranslate"><span class="pre">.md</span></code> and the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files needs changing also<a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> and <code class="docutils literal notranslate"><span class="pre">.md</span></code> content files are to be located in the root of the cloned <code class="docutils literal notranslate"><span class="pre">data-science-for-esm</span></code> folder, or a subfolder, and specified accordingly in the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>.</p>
 <ul>
-<li><p>If not being placed in the root, the workflow will be unable to find the files specified in the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>, resulting in the unsuccessful deployment, and unaccessible <code class="docutils literal notranslate"><span class="pre">github.io</span></code>.</p></li>
+<li><p>If not being placed in the root folder, or subfolder, the workflow will be unable to find the files specified in the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>, resulting in the unsuccessful deployment, and unaccessible <code class="docutils literal notranslate"><span class="pre">github.io</span></code>.</p></li>
 </ul>
 </li>
-<li><p>Modify <code class="docutils literal notranslate"><span class="pre">*.ipynb</span></code> and <code class="docutils literal notranslate"><span class="pre">.md</span></code> files as seen fit. They are the core-content.</p></li>
+<li><p>Modify <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> and <code class="docutils literal notranslate"><span class="pre">.md</span></code> files as seen fit. They are the core-content.</p></li>
 <li><p>For any content change, there is a chain of git to-do commands, for a website update:</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="s2">&quot;owner&quot;</span><span class="o">/</span><span class="n">data</span><span class="o">-</span><span class="n">science</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">esm</span><span class="o">.</span><span class="n">git</span>
@@ -414,9 +423,16 @@ document.write(`
 </div>
 <p>Both <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>, as well as the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> are to remain in the root of the <code class="docutils literal notranslate"><span class="pre">data-science-for</span> <span class="pre">esm</span></code> folder. The details of the website, such as the author, logo, other relevant GitHub and Google Collab links, are defined in the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>. Please use the already provided <code class="docutils literal notranslate"><span class="pre">_toc</span></code> and <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> files as a template, and follow their structure.</p>
 <ul class="simple">
-<li><p>In the <code class="docutils literal notranslate"><span class="pre">data-science-for-esm/_toc.yml</span></code> <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/37c3ef84651a12ee947573dfedd6c4b7786731bc/data-science-for-esm/_toc.yml">file</a>, a sequence of files to be included in the GitHub Page is defined, and further used by the <code class="docutils literal notranslate"><span class="pre">jupyter-build</span> <span class="pre">book</span></code> command.</p></li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">data-science-for-esm/_toc.yml</span></code> <a class="reference external" href="https://github.com/fneum/data-science-for-esm/blob/bc6e35f5c007a33972d23d1df7e26c59f2a875dd/data-science-for-esm/_toc.yml">file</a>, a sequence of files to be included in the GitHub Page is defined, and further used by the <code class="docutils literal notranslate"><span class="pre">jupyter-build</span> <span class="pre">book</span></code> command.</p></li>
 </ul>
 <p>After a successful run, the TOC displayed will be displayed in the left-side menu.</p>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Otherwise it results in a broken workflow deployment.</p>
+</aside>
+</aside>
 </section>
 
     <script type="text/x-thebe-config">
@@ -455,7 +471,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Deployment Setup</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Deployment Settings</p>
       </div>
     </a>
     <a class="right-next"

@@ -184,12 +184,11 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_Fork.html">2. Create a New Fork</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_GH_Pages.html">3. GitHub Pages Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_Deploy.html">4. Deployment Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_Content.html">5. Content Modification Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_GH_Pages.html">3. GitHub Pages Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_Deploy.html">4. Deployment Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_Content.html">5. Modify Content</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06_Workflow.html">6. GitHub Workflow Deployment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="07_Ref.html">7. References</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="07_Ref.html">7. Further Reading and Citation</a></li>
 </ul>
 
     </div>
@@ -410,16 +409,15 @@ document.write(`
 <ul class="simple">
 <li><p>Its primary purpose is to guide you on how to generate a GitHub page, to be used for learning material, i.e. lectures, or similar.</p></li>
 <li><p>It can also be purpose for anything else, for that matter.</p></li>
-<li><p>This setup draws from the <a class="reference external" href="https://github.com/peaceiris/actions-gh-pages">peaceiris actions-gh-pages</a>, in specific using the <a class="reference external" href="https://github.com/peaceiris/actions-gh-pages?tab=readme-ov-file#%EF%B8%8F-static-site-generators-with-python">Static Site Generator with Python</a>.</p>
-<ul>
-<li><p><em>This serves only as a reference, as the the full explanation is below.</em></p></li>
+<li><p>This setup uses the <a class="reference external" href="https://github.com/executablebooks/cookiecutter-jupyter-book/tree/main">cookiecutter-jupyter-book</a><a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id5" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> workflow.</p></li>
 </ul>
-</li>
-</ul>
-<p>By following these instructions, one is able to create his own website, alike this one, with a tailor-made content, quickly and with ease. Albeit, there are two or three things to keep in mind when doing so. Please read on.</p>
+<blockquote>
+<div><p><strong>Note:</strong> <em>This serves only as a reference, as the the full explanation is below.</em></p>
+</div></blockquote>
+<p>By following these instructions, one is able to create his own website, alike this one, with a tailor-made content, quickly and with ease. Albeit, there are two or three things to keep in mind when doing so, specified below.</p>
 <section id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h2>
-<p>Have in mind that that for a successful workflow run, the <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/e52f7980165928a7cd90826ee0bf8cd3fb407892/environment.yaml">correct python environment</a>, with all the <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/e52f7980165928a7cd90826ee0bf8cd3fb407892/requirements.txt">python package dependencies</a> satisfied, is required. Our suggestion is the package manager <code class="docutils literal notranslate"><span class="pre">conda</span></code> or <code class="docutils literal notranslate"><span class="pre">mamba</span></code>, for which further details, and installation instructions, are provided in the <a class="reference external" href="https://pypsa-earth.readthedocs.io/en/latest/installation.html">documentation of PyPSA-Earth creators</a>.</p>
+<p>For a successful workflow run, the <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/e52f7980165928a7cd90826ee0bf8cd3fb407892/environment.yaml">correct python environment</a>, with all the <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/e52f7980165928a7cd90826ee0bf8cd3fb407892/requirements.txt">python package dependencies</a> satisfied, is required. Our suggestion is the package manager <code class="docutils literal notranslate"><span class="pre">conda</span></code> or <code class="docutils literal notranslate"><span class="pre">mamba</span></code>, for which further details, and installation instructions, are provided in the <a class="reference external" href="https://pypsa-earth.readthedocs.io/en/latest/installation.html">documentation of PyPSA-Earth creators</a>.</p>
 <ul class="simple">
 <li><p>There is no need for the BAU:</p></li>
 </ul>
@@ -435,8 +433,20 @@ document.write(`
 <span class="n">pip</span> <span class="n">install</span> <span class="n">highspy</span>
 </pre></div>
 </div>
-<p>Python and <code class="docutils literal notranslate"><span class="pre">*.ipynb</span></code> are optimally used in an <a class="reference external" href="https://github.com/microsoft/vscode">IDE</a>. Our recommendation is VSCode, used by the <a class="reference external" href="https://pypsa-earth.readthedocs.io/en/latest/installation.html">PyPSA developers</a>, due to its ease of use, and being open-source.</p>
+<p>Python and Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) are optimally used in an <a class="reference external" href="https://github.com/microsoft/vscode">IDE</a>. Our recommendation is VSCode, used by the <a class="reference external" href="https://pypsa-earth.readthedocs.io/en/latest/installation.html">PyPSA developers</a>, due to its ease of use, and being open-source.</p>
 <!-- # Internal Doc References -->
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id3" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://executablebooks.github.io/cookiecutter-jupyter-book/intro.html">More details also here</a><a class="footnote-reference brackets" href="#id5" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+</aside>
+<aside class="footnote brackets" id="id5" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id4">2</a>)</span>
+<p>These serves only as a reference, as the the full explanation is below</p>
+</aside>
+</aside>
 </section>
 </section>
 

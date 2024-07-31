@@ -61,7 +61,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3. GitHub Pages Setup" href="03_GH_Pages.html" />
+    <link rel="next" title="3. GitHub Pages Setting" href="03_GH_Pages.html" />
     <link rel="prev" title="1. Introduction" href="01_Intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -184,12 +184,11 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="01_Intro.html">1. Introduction</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Create a New Fork</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_GH_Pages.html">3. GitHub Pages Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_Deploy.html">4. Deployment Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_Content.html">5. Content Modification Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_GH_Pages.html">3. GitHub Pages Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_Deploy.html">4. Deployment Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_Content.html">5. Modify Content</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06_Workflow.html">6. GitHub Workflow Deployment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="07_Ref.html">7. References</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="07_Ref.html">7. Further Reading and Citation</a></li>
 </ul>
 
     </div>
@@ -392,9 +391,8 @@ document.write(`
 <!-- > **Note:** The first step is forking the repository, having the below in mind.
 
 Before forking this repository please have the following in mind: -->
-<ul class="simple">
-<li><p>In the <strong><b><mark>Create a new fork</mark></b></strong> pop-up menu, shown in the figure below, <em><ins>deselect</ins></em> the default <strong>Copy the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch only</strong> option.</p></li>
-</ul>
+<p>Create your fork of this repository by clicking on the figure below.</p>
+<p>In the <strong><b><mark>Create a new fork</mark></b></strong> pop-up menu, shown in the figure below, <em><ins>deselect</ins></em> the default <strong>Copy the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch only</strong> option.</p>
 <p>By doing so, you will reduce further branch creation, required by the workflow.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -408,14 +406,14 @@ Before forking this repository please have the following in mind: -->
 </center>
 </div>
 <blockquote>
-<div><p><strong>Note:</strong> The key point is to have at least one branch, other than <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>, in your fork. This has been tested using both the <code class="docutils literal notranslate"><span class="pre">main</span></code> and the <code class="docutils literal notranslate"><span class="pre">side</span> <span class="pre">branches</span></code>.</p>
+<div><p><strong>Note:</strong> The key point is to have at least one branch, beside the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>, in your fork. This has been tested using both the <code class="docutils literal notranslate"><span class="pre">main</span></code>,as well as the <code class="docutils literal notranslate"><span class="pre">side</span> <span class="pre">branches</span></code>.</p>
 </div></blockquote>
 <p>In this workflow:</p>
 <ul class="simple">
-<li><p>Published website is in the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch</p></li>
-<li><p>Source code is in a arbitrary <code class="docutils literal notranslate"><span class="pre">branch</span></code> defined by the user - any other than <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code></p></li>
-<li><p>The arbitrary <code class="docutils literal notranslate"><span class="pre">branch</span></code> can be created locally:</p></li>
+<li><p>the published website is in the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch,</p></li>
+<li><p>the source code is in a arbitrary <code class="docutils literal notranslate"><span class="pre">branch</span></code> defined by the user - any other than <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>,</p></li>
 </ul>
+<p>The arbitrary <code class="docutils literal notranslate"><span class="pre">branch</span></code> can be created locally:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">switch</span> <span class="o">-</span><span class="n">c</span> <span class="n">branch</span>
 <span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">branch</span>
 </pre></div>
@@ -423,12 +421,12 @@ Before forking this repository please have the following in mind: -->
 <!-- * However, this is to be skipped if adhering to the **Note** above. -->
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch will be automatically generated, as defined by the workflow, hence its creation is not required.</p></li>
-<li><p>It is also <strong>not</strong> required to have the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> locally, once generated, as it hosts only the static site build files, which are taken care of by the workflow.</p></li>
+<li><p>It is <strong>not</strong> required to have the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> locally, once generated by the workflow, as it hosts only the static site build files, which are taken care of by the workflow.</p></li>
 </ul>
 <blockquote>
-<div><p><strong>Note:</strong> The remote <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>, itself, hosts the required <code class="docutils literal notranslate"><span class="pre">HTML</span></code>, <code class="docutils literal notranslate"><span class="pre">css</span></code>, <code class="docutils literal notranslate"><span class="pre">.js</span></code>, and the other files, used for generating the <code class="docutils literal notranslate"><span class="pre">github.io</span></code> website. There is no requirement in having this branch locally.</p>
+<div><p><strong>Note:</strong> The remote <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>, itself, hosts the required <code class="docutils literal notranslate"><span class="pre">.html</span></code>, <code class="docutils literal notranslate"><span class="pre">.css</span></code>, <code class="docutils literal notranslate"><span class="pre">.js</span></code>, and the other files, used for generating the <code class="docutils literal notranslate"><span class="pre">github.io</span></code> website. There is no requirement in having this branch locally.</p>
 </div></blockquote>
-<p>These will be re-generated, upon a successful workflow execution, every time <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> is performed, in the prior specified git branch. Branch specification is provided in the <a class="reference internal" href="04_Deploy.html#deployment-setup"><span class="std std-ref">Deployment Setup</span></a>.</p>
+<p>These will be re-generated, upon a successful workflow execution, every time <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> is performed, in the prior specified git branch. Branch specification is provided in the <a class="reference internal" href="04_Deploy.html#deployment-setup"><span class="std std-ref">Deployment Settings</span></a>.</p>
 <!-- of the forked repository, in the `.github/workflows/deploy.yml` ([link][07]) file which will contain the required `HTML`, `css`, `.js`, and other files
 is used for generating the required `HTML`, `css`, `.js`, as well as the other files - other than the `gh-pages`
 
@@ -479,7 +477,7 @@ is used for generating the required `HTML`, `css`, `.js`, as well as the other f
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>GitHub Pages Setup</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>GitHub Pages Setting</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
