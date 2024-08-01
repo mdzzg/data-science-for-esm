@@ -389,7 +389,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="github-workflow-deployment">
 <h1><span class="section-number">7. </span>GitHub Workflow Deployment<a class="headerlink" href="#github-workflow-deployment" title="Link to this heading">#</a></h1>
-<p>In <a class="reference internal" href="#deployment-setup"><span class="xref myst">Deployment Setup</span></a> we defined the deployment branch in the <code class="docutils literal notranslate"><span class="pre">.github/workflows/deploy.yml</span></code> [file][deploy], which is used then used for the deployment, whenever performing <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>. You are free to use any branch, other than the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>, keeping in mind that only upon the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>, the workflow will be triggered.</p>
+<p>In <a class="reference internal" href="05_Deploy.html#deployment-settings"><span class="std std-ref">Deployment Settings</span></a> we defined the deployment branch in the <code class="docutils literal notranslate"><span class="pre">.github/workflows/deploy.yml</span></code> [file][deploy], which is used in the workflow, whenever performing <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>. You are free to use any branch, other than the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>, keeping in mind that only upon the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>, the workflow will be triggered.</p>
 <p>The workflow deployment itself is tracked by the status indicator in the repository, in this case a beige-brown dot <strong><b><font color='peru'>⏺</font></strong></b>, which if clicked on, will show the running status, and the deployment details. As mentioned, the deployment takes approx. 2 minutes to finish.</p>
 <center>
 <figure>
@@ -399,20 +399,34 @@ document.write(`
     <figcaption>Deployment status upon <code>git push</code> to the branch specified in the <em>deploy.yml</em> file</figcaption>
 </figure>
 </center>
-<p>Upon a successful deployment, indicated by the deploy status:</p>
+<p>Upon deployment, indicated by the deploy status:</p>
 <ul class="simple">
-<li><p>successful: a green thick <strong><b><font color='green'>🗸</font></strong></b></p></li>
-<li><p>unsuccessful: a red cross mark <font color="red">🗶</font>,
-you should be able to see the changes taking place in the specified <code class="docutils literal notranslate"><span class="pre">github.io</span></code> URL.</p></li>
+<li><p>successful: a green thick <strong><b><font color='green'>🗸</font></strong></b></p>
+<ul>
+<li><p>you should be able to see the changes taking place, after a few minutes, at the specified <code class="docutils literal notranslate"><span class="pre">https://&lt;user&gt;.github.io/&lt;myonlinebook&gt;</span></code><a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
+</ul>
+</li>
+<li><p>unsuccessful: a red cross mark <font color="red">🗶</font>, indicating an error in the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>, or one of the content files</p>
+<ul>
+<li><p>indicating an error in the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>, or one of the content files, which need revision.</p></li>
+</ul>
+</li>
 </ul>
 <center>
 <figure>
     <!-- <a href='https://github.com/open-energy-transition/data-science-for-esm/settings/pages'> -->
     <img src='https://raw.githubusercontent.com/open-energy-transition/data-science-for-esm/stanford/data-science-for-esm/_images/06_successful_deployment.png' width='85%'style='vertical-align:middle;border:5px solid paleturquoise;margin:30px 30px' />
     <!-- </a> -->
-    <figcaption>Successful deployment, after a finalized <code>jupyter book build</code> run</figcaption>
+    <figcaption>Successful deployment, after a finalized <code>jupyter-book build</code> run</figcaption>
 </figure>
 </center>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p><a class="github reference external" href="https://github.com/executablebooks/cookiecutter-jupyter-book/tree/main">executablebooks/cookiecutter-jupyter-book</a></p>
+</aside>
+</aside>
 </section>
 
     <script type="text/x-thebe-config">

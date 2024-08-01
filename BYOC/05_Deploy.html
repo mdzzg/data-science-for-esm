@@ -392,7 +392,7 @@ document.write(`
 <blockquote>
 <div><p><strong>Note:</strong> The key point is to set the correct deployment branch in the <code>./github/workflows/deploy.yml</code>.</p>
 </div></blockquote>
-<p>In the <code>.github/workflows/deploy.yml</code> <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/ef394898e3100e2bd2d074a8b2da89235355cd4e/.github/workflows/deploy.yml#L4-L7">file</a> specify the branch, to be used by the workflow. Upon the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> command to the specified branch, the workflow will be triggered:</p>
+<p>In the <code>.github/workflows/deploy.yml</code> <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/ef394898e3100e2bd2d074a8b2da89235355cd4e/.github/workflows/deploy.yml#L4-L7">file</a> specify the branch, to be used by the workflow:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">on</span><span class="p">:</span>
   <span class="c1"># Trigger the workflow on push to the main branch</span>
   <span class="n">push</span><span class="p">:</span>
@@ -400,22 +400,38 @@ document.write(`
     <span class="o">-</span> <span class="n">main</span>
 </pre></div>
 </div>
-<p>In the same <code class="docutils literal notranslate"><span class="pre">deploy.yml</span></code> file</p>
-<p>The specified <code class="docutils literal notranslate"><span class="pre">branch</span></code> can be any<a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, other than the <ins><code class="docutils literal notranslate"><span class="pre">gh-pages</span></code></ins>.</p>
-<p>This setup uses the <code class="docutils literal notranslate"><span class="pre">stanford</span></code> branch for our workflow, but it can also be the <code class="docutils literal notranslate"><span class="pre">main</span></code>, or any other newly created branch. Upon the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>, the <a class="reference internal" href="#github-workflow-deployment"><span class="xref myst">workflow</span></a> will be triggered.</p>
-<p>The deployment itself is the <code class="docutils literal notranslate"><span class="pre">jupyter-build</span> <span class="pre">book</span> <span class="pre">data-science-for-esm/</span></code> <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/b1ab15c6d99fb325ca3877b0d33578a42669c3b7/.github/workflows/deploy.yml#L37">command</a>. This command is generating the HTML code from the data provided in the data-science-for-esm [folder][16].</p>
-<p>Further explanation of this command, i.e. <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code>, as well as the other commands is provided in the <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/37c3ef84651a12ee947573dfedd6c4b7786731bc/README.md">README.md</a> file. A more detailed explanation is to be found at the following <strong>References:</strong></p>
+<p>Upon the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> command to the specified branch<a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, the workflow will be triggered.</p>
+<blockquote>
+<div><p><strong>Note:</strong> The specified <code class="docutils literal notranslate"><span class="pre">branch</span></code> can be any<a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, other than the <ins><code class="docutils literal notranslate"><span class="pre">gh-pages</span></code></ins>.</p>
+</div></blockquote>
+<p>In the same <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/ef394898e3100e2bd2d074a8b2da89235355cd4e/.github/workflows/deploy.yml#L9C1-L15C15"><code class="docutils literal notranslate"><span class="pre">deploy.yml</span></code> file</a> set the following permissions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">permissions</span><span class="p">:</span>
+  <span class="n">pages</span><span class="p">:</span> <span class="n">write</span>
+  <span class="n">deployments</span><span class="p">:</span> <span class="n">write</span>
+  <span class="n">contents</span><span class="p">:</span> <span class="n">write</span>
+  <span class="n">statuses</span><span class="p">:</span> <span class="n">write</span>
+  <span class="n">actions</span><span class="p">:</span> <span class="n">write</span>
+  <span class="n">checks</span><span class="p">:</span> <span class="n">read</span>
+</pre></div>
+</div>
+<p>This setup uses the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch in the workflow, but it can also be any other newly created side-branch. Upon the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>, the <a class="reference internal" href="07_Workflow.html#github-workflow-deployment"><span class="std std-ref">workflow</span></a> will be triggered.</p>
+<p>The deployment itself is the <code class="docutils literal notranslate"><span class="pre">jupyter-build</span> <span class="pre">book</span> <span class="pre">data-science-for-esm</span></code> <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/b1ab15c6d99fb325ca3877b0d33578a42669c3b7/.github/workflows/deploy.yml#L37">command</a>. This command is in charge generating the HTML code from the data provided in the data-science-for-esm <a class="reference external" href="https://github.com/fneum/data-science-for-esm/tree/bc6e35f5c007a33972d23d1df7e26c59f2a875dd/data-science-for-esm">folder</a>.</p>
+<p>Further explanation of this command, i.e. <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code>, as well as the other commands is provided in the <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/37c3ef84651a12ee947573dfedd6c4b7786731bc/README.md">README.md</a> file. A more detailed explanation is to be found at the following references:</p>
+<!-- 1. [Build your book](https://jupyterbook.org/en/stable/start/build.html) -->
 <ol class="arabic simple">
-<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/start/build.html">Build your book</a></p></li>
 <li><p><a class="reference external" href="https://jupyterbook.org/en/stable/basics/build.html">Build from the command line</a></p></li>
 <li><p><a class="reference external" href="https://jupyterbook.org/en/stable/structure/toc.html">Structure the Table of Contents</a></p></li>
 </ol>
 <!-- # Internal Doc References -->
 <hr class="footnotes docutils" />
 <aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id2" role="doc-footnote">
+<aside class="footnote brackets" id="id3" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>The workflow has been successfully tested using the <code class="docutils literal notranslate"><span class="pre">stanford</span></code> branch, while, when using the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch, we experienced some issues, which are currently being investigated.</p>
+<p>In this example it is the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch.</p>
+</aside>
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>The workflow has been successfully tested using the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch, as well as the side-branches, once the specification of the branch and the permissions are set in the <code class="docutils literal notranslate"><span class="pre">deploy.yml</span></code>, as explained above.</p>
 </aside>
 </aside>
 </section>
