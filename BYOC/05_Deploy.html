@@ -363,7 +363,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -379,6 +381,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#content-feature-branch">Content (feature) branch</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -423,6 +433,11 @@ document.write(`
 <li><p><a class="reference external" href="https://jupyterbook.org/en/stable/basics/build.html">Build from the command line</a></p></li>
 <li><p><a class="reference external" href="https://jupyterbook.org/en/stable/structure/toc.html">Structure the Table of Contents</a></p></li>
 </ol>
+<section id="content-feature-branch">
+<h2>Content (feature) branch<a class="headerlink" href="#content-feature-branch" title="Link to this heading">#</a></h2>
+<p>Albeit, there is one very valid reason to deploy from a non-main branch, i.e. so-called <code class="docutils literal notranslate"><span class="pre">feature_branch</span></code>.</p>
+<p>The reason for doing so is to keep the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch of your forked repository synchronized/identical to <code class="docutils literal notranslate"><span class="pre">main</span></code> branch of upstream. point is main is used as a source in all our projects to get a stable working version of the model. For example, to get a working version of PyPSA-Earth, people clone the main and use the code directly from there. If there has been some experimenting in main, and something got broken, they often disappoint in us (or in open source modelling in general) and do not try again.</p>
+<p>That is the major reason why we are always very careful with introducing any changes into upstream main, and trying to do that is the possibly clean way. The most clean approach we found by now is keeping the local main completely the same as main of the upstream, including git history. In particular, that facilitates comparing the fork and the upstream, when reviewing the contributions, and allows you to “reset” your fork, when something went wrong. [The latter is really handy – saying from the experience!]</p>
 <!-- # Internal Doc References -->
 <hr class="footnotes docutils" />
 <aside class="footnote-list brackets">
@@ -435,6 +450,7 @@ document.write(`
 <p><span style="font-size:.8em;">The workflow has been successfully tested using the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch, as well as the side-branches, once accordingly modifying the branch and the permissions in the <code class="docutils literal notranslate"><span class="pre">deploy.yml</span></code>, as explained above.</span></p>
 </aside>
 </aside>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -491,6 +507,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#content-feature-branch">Content (feature) branch</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

@@ -363,7 +363,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -379,6 +381,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anatomy-of-a-jupyter-book">Anatomy of a Jupyter Book</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -390,7 +400,14 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="modify-the-content">
 <h1>Modify the Content<a class="headerlink" href="#modify-the-content" title="Link to this heading">#</a></h1>
-<p>Use these files as the template of your content, as they will reduce your content development time.</p>
+<section id="anatomy-of-a-jupyter-book">
+<h2>Anatomy of a Jupyter Book<a class="headerlink" href="#anatomy-of-a-jupyter-book" title="Link to this heading">#</a></h2>
+<p>There are three things that you need in order to build a <a class="reference external" href="https://jupyterbook.org/en/stable/start/create.html#">Jupyter Book</a>:</p>
+<ul class="simple">
+<li><p>A configuration file (<a class="reference external" href="https://github.com/fneum/data-science-for-esm/blob/bc6e35f5c007a33972d23d1df7e26c59f2a875dd/data-science-for-esm/_config.yml">_config.yml</a>)</p></li>
+<li><p>A table of contents file (<a class="reference external" href="https://github.com/fneum/data-science-for-esm/blob/bc6e35f5c007a33972d23d1df7e26c59f2a875dd/data-science-for-esm/_toc.yml">_toc.yml</a>)</p></li>
+<li><p>Your book’s <a class="reference external" href="https://jupyterbook.org/en/stable/file-types/index.html">source files</a></p></li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code> builds Jupyter Book off of <mark>Jupyter Notebook</mark> and <mark>markdown</mark> files.</p>
@@ -398,15 +415,14 @@ document.write(`
 \ -->
 <div class="tip admonition">
 <p class="admonition-title">Supported files</p>
-<p>For the full list of the available file formats go to <a class="reference external" href="https://jupyterbook.org/en/stable/file-types/index.html">JupyterBook</a>.</p>
+<p>For the full list of the available file formats go to the <a class="reference external" href="https://jupyterbook.org/en/stable/file-types/index.html">JupyterBook</a>.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Jupyter Notebook</p>
+<p>Jupyter Notebook files can also contain markdown. For more refer to the <a class="reference external" href="https://executablebooks.github.io/cookiecutter-jupyter-book/notebooks.html">MyST</a>.</p>
 </div>
 </div>
-<div class="docutils">
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Jupyter Notebook files can also contain markdown. For more refer to <a class="reference external" href="https://executablebooks.github.io/cookiecutter-jupyter-book/notebooks.html">MyST</a>.</p>
-</div>
-</div>
+<p>Use the files presented here as the template of your book, as they will reduce your content development time.</p>
 <ul class="simple">
 <li><p>The website logo, as well as the other figures can be placed in the <code class="docutils literal notranslate"><span class="pre">data-science-for-esm/_images/</span></code> <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/tree/ce07272ac531acdbe4b6e18110c5fbc70f3b03c0/data-science-for-esm/_images">folder</a>.</p></li>
 <li><p><strong>When changing the images and modifying the content files, the referencing throughout the <code class="docutils literal notranslate"><span class="pre">.md</span></code> and the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files needs changing as well<a class="footnote-reference brackets" href="#id4" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</strong></p></li>
@@ -451,6 +467,7 @@ document.write(`
 <p><a class="reference external" href="https://jupyterbook.org/en/stable/start/create.html#book-configuration-config-yml">https://jupyterbook.org/en/stable/start/create.html#book-configuration-config-yml</a></p>
 </aside>
 </aside>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -507,6 +524,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anatomy-of-a-jupyter-book">Anatomy of a Jupyter Book</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
