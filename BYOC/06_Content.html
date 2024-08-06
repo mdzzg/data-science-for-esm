@@ -407,8 +407,8 @@ document.write(`
 <!-- :class: attention -->
 <p><code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code> builds Jupyter Book off of a content source:</p>
 <ul class="simple">
-<li><p><b><mark>Jupyter Notebook</mark></b> and</p></li>
-<li><p><b><mark>Markdown</mark></b> files.</p></li>
+<li><p><b><mark style="background-color: peachpuff; color: black">Jupyter Notebook (.ipynb)</mark></b> and</p></li>
+<li><p><b><mark style="background-color: peachpuff; color: black">Markdown (.md)</mark></b> files.</p></li>
 </ul>
 <!-- > <br />
 \ -->
@@ -421,10 +421,11 @@ document.write(`
 <p>Jupyter Notebook files can also contain markdown. For more refer to the <a class="reference external" href="https://executablebooks.github.io/cookiecutter-jupyter-book/notebooks.html">MyST</a>.</p>
 </div>
 </div>
-<p>Use the files presented here as the template of your book, as they will reduce your content development time.</p>
+<p>Use the files presented here as the template of your Jupyter Book, as they will reduce your content development time.</p>
 <ul class="simple">
-<li><p>The website logo, as well as the other figures can be placed in the <code class="docutils literal notranslate"><span class="pre">data-science-for-esm/_images/</span></code> <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/tree/ce07272ac531acdbe4b6e18110c5fbc70f3b03c0/data-science-for-esm/_images">folder</a>.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> and the <code class="docutils literal notranslate"><span class="pre">.md</span></code> content files are to be located in the root, or a subfolder, of the cloned <code class="docutils literal notranslate"><span class="pre">data-science-for-esm</span></code>, and specified accordingly in the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code><a class="footnote-reference brackets" href="#id4" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.
+<li><p>The <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> and the <code class="docutils literal notranslate"><span class="pre">.md</span></code> content files are to be located in the root, or a subfolder, of the cloned <code class="docutils literal notranslate"><span class="pre">data-science-for-esm</span></code>, and specified accordingly in the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code><a class="footnote-reference brackets" href="#id4" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p></li>
+<li><p>Both the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>, as well as the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> are to remain in the root of the <code class="docutils literal notranslate"><span class="pre">data-science-for-esm</span></code> folder.</p></li>
+<li><p>The website logo, as well as the other figures can be placed in the <code class="docutils literal notranslate"><span class="pre">data-science-for-esm/_images/</span></code> <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/tree/ce07272ac531acdbe4b6e18110c5fbc70f3b03c0/data-science-for-esm/_images">folder</a>.
 <br />
 <br /></p></li>
 </ul>
@@ -432,9 +433,9 @@ document.write(`
 <h1>Modify the Content<a class="headerlink" href="#modify-the-content" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p><strong><ins>Modify the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> and the <code class="docutils literal notranslate"><span class="pre">.md</span></code> files as seen fit. They are the core-content.</ins></strong></p></li>
-<li><p><strong>When changing the images and modifying the content files, the referencing throughout the <code class="docutils literal notranslate"><span class="pre">.md</span></code> and the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files needs changing as well<a class="footnote-reference brackets" href="#id5" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</strong></p></li>
+<li><p><strong>When changing the images and modifying the content files, the referencing throughout the <code class="docutils literal notranslate"><span class="pre">.md</span></code> and the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files needs changing as well<a class="footnote-reference brackets" href="#id5" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</strong></p></li>
 </ul>
-<p>To have the content changes be reflected in the website, there is a chain of git to-do commands:</p>
+<p>To have the content changes reflected in the website, there is a chain of <strong>git</strong> to-do commands:</p>
 <!-- git clone https://github.com/"owner"/data-science-for-esm.git -->
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># make changes to the content</span>
 <span class="n">git</span> <span class="n">status</span>
@@ -444,13 +445,12 @@ document.write(`
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Both the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>, as well as the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> are to remain in the root of the <code class="docutils literal notranslate"><span class="pre">data-science-for-esm</span></code> folder.</p></li>
 <li><p>The metadata of the website, such as the author, logo, and other relevant GitHub and Google Colab links, are to be defined in the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code><a class="footnote-reference brackets" href="#id6" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>:</p>
 <ul>
 <li><p>Use the already provided <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> and <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> files as a template, and follow their structure.</p></li>
 </ul>
 </li>
-<li><p>In the <code class="docutils literal notranslate"><span class="pre">data-science-for-esm/_toc.yml</span></code> <a class="reference external" href="https://github.com/fneum/data-science-for-esm/blob/bc6e35f5c007a33972d23d1df7e26c59f2a875dd/data-science-for-esm/_toc.yml">file</a>, a sequence of files to be included in the GitHub Page is defined, and further used by the <code class="docutils literal notranslate"><span class="pre">jupyter-build</span> <span class="pre">book</span></code> command.</p>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">data-science-for-esm/_toc.yml</span></code> <a class="reference external" href="https://github.com/fneum/data-science-for-esm/blob/bc6e35f5c007a33972d23d1df7e26c59f2a875dd/data-science-for-esm/_toc.yml">file</a>, a sequence of files to be included in the Jupyter Book, and the GitHub Page, is defined, and further used by the <code class="docutils literal notranslate"><span class="pre">jupyter-build</span> <span class="pre">book</span></code> command.</p>
 <ul>
 <li><p>Detailed customization instructions on both the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> and the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> are provided in <a class="reference external" href="https://jupyterbook.org/en/stable/structure/configure.html">link</a> and <a class="reference external" href="https://jupyterbook.org/en/stable/structure/toc.html">link</a>. <strong><font color='red'>⇶ MUST READ!</font></strong></p></li>
 </ul>
@@ -460,12 +460,12 @@ document.write(`
 <hr class="footnotes docutils" />
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id4" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">2</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>If not being placed in the root folder, or subfolder, the workflow will be unable to find the files specified by the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>, resulting in the unsuccessful deployment, and unaccessible <code class="docutils literal notranslate"><span class="pre">https://&lt;user&gt;.github.io/data-science-for-esm</span></code>.</p>
 </aside>
 <aside class="footnote brackets" id="id5" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
-<p><strong><font color='red'>Otherwise it results in a broken workflow deployment!</font></strong></p>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p><strong><font color='red'>Otherwise workflow deployment will break!</font></strong></p>
 </aside>
 <aside class="footnote brackets" id="id6" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
