@@ -186,7 +186,8 @@
 <li class="toctree-l2"><a class="reference internal" href="03_Fork.html">Create a New Fork</a></li>
 <li class="toctree-l2"><a class="reference internal" href="04_GH_Pages.html">GitHub Pages Setting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="05_Deploy.html">Deployment Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="06_Content.html">Modify the Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_Content.html">Anatomy of a Jupyter Book</a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="07_Workflow.html">GitHub Workflow Deployment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="08_Ref.html">References</a></li>
 </ul>
@@ -390,7 +391,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="requirements">
 <h1>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h1>
-<p>For a successful workflow run, the <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/e52f7980165928a7cd90826ee0bf8cd3fb407892/environment.yaml">correct python environment</a>, with all of the <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/e52f7980165928a7cd90826ee0bf8cd3fb407892/requirements.txt">python package dependencies</a> included, is a requirement.</p>
+<p>For a successful workflow run, the <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/e52f7980165928a7cd90826ee0bf8cd3fb407892/environment.yaml">correct python environment</a>, with all of the <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/e52f7980165928a7cd90826ee0bf8cd3fb407892/requirements.txt">python package dependencies</a> included, is required<a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
 <p>Our suggestion is the package manager <code class="docutils literal notranslate"><span class="pre">conda</span></code> or <code class="docutils literal notranslate"><span class="pre">mamba</span></code>, which for installation instructions are provided in the <a class="reference external" href="https://pypsa-earth.readthedocs.io/en/latest/installation.html">documentation of PyPSA-Earth creators</a>.</p>
 <ul class="simple">
 <li><p>There is no need for the BAU:</p></li>
@@ -408,12 +409,16 @@ document.write(`
 </pre></div>
 </div>
 <p>Python and Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) are optimally used in an IDE.</p>
-<p>Our recommendation is <a class="reference external" href="https://github.com/microsoft/vscode">VSCode</a><a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, together with the <code class="docutils literal notranslate"><span class="pre">Jupyter</span></code> <a class="reference external" href="https://medium.com/&#64;claudia.nikel/how-to-setup-a-jupyter-notebook-in-vs-code-w-virtual-env-kernels-install-packages-884cf643375e">extension</a>.</p>
+<p>Our recommendation is <a class="reference external" href="https://github.com/microsoft/vscode">VSCode</a><a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, together with the <code class="docutils literal notranslate"><span class="pre">Jupyter</span></code> <a class="reference external" href="https://medium.com/&#64;claudia.nikel/how-to-setup-a-jupyter-notebook-in-vs-code-w-virtual-env-kernels-install-packages-884cf643375e">extension</a>.</p>
 <!-- # Internal Doc References -->
 <hr class="footnotes docutils" />
 <aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id2" role="doc-footnote">
+<aside class="footnote brackets" id="id3" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Yours Python venv can very, all depending on the Jupyter Notebooks’ content.</p>
+</aside>
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
 <p><b><font color='red'>Also used by the <a class="reference external" href="https://pypsa-earth.readthedocs.io/en/latest/installation.html">PyPSA developers</a>, due to its simplicity, and being open-source.</font></b></p>
 </aside>
 </aside>
