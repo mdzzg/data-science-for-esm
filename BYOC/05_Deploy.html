@@ -386,7 +386,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#content-i-e-feature-branch">Content (i.e. feature) branch</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#content-i-e-feature-branch3">Content (i.e. feature) branch</a></li>
 </ul>
             </nav>
         </div>
@@ -411,9 +411,9 @@ document.write(`
     <span class="o">-</span> <span class="n">main</span>
 </pre></div>
 </div>
-<p>Upon the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> command to the specified branch<a class="footnote-reference brackets" href="#id4" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, the workflow will be triggered.</p>
+<p>Upon the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> command to the specified branch<a class="footnote-reference brackets" href="#id5" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, the workflow will be triggered.</p>
 <blockquote>
-<div><p><strong>Note:</strong> The specified <code class="docutils literal notranslate"><span class="pre">branch</span></code> can be any<a class="footnote-reference brackets" href="#id5" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, other than the <ins><code class="docutils literal notranslate"><span class="pre">gh-pages</span></code></ins>.</p>
+<div><p><strong>Note:</strong> The specified <code class="docutils literal notranslate"><span class="pre">branch</span></code> can be any<a class="footnote-reference brackets" href="#id6" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, other than the <ins><code class="docutils literal notranslate"><span class="pre">gh-pages</span></code></ins>.</p>
 </div></blockquote>
 <p>In the same <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/ef394898e3100e2bd2d074a8b2da89235355cd4e/.github/workflows/deploy.yml#L9C1-L15C15"><code class="docutils literal notranslate"><span class="pre">deploy.yml</span></code> file</a> set the following permissions:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">permissions</span><span class="p">:</span>
@@ -433,9 +433,9 @@ document.write(`
 <li><p><a class="reference external" href="https://jupyterbook.org/en/stable/basics/build.html">Build from the command line</a></p></li>
 <li><p><a class="reference external" href="https://jupyterbook.org/en/stable/structure/toc.html">Structure the Table of Contents</a></p></li>
 </ol>
-<section id="content-i-e-feature-branch">
-<h2>Content (i.e. feature) branch<a class="headerlink" href="#content-i-e-feature-branch" title="Link to this heading">#</a></h2>
-<p>There is a very valid reason for deploying your website from a non-main branch though, i.e. commonly termed <code class="docutils literal notranslate"><span class="pre">feature</span></code> branch<a class="footnote-reference brackets" href="#id6" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
+<section id="content-i-e-feature-branch3">
+<h2>Content (i.e. feature) branch<a class="footnote-reference brackets" href="#id7" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a><a class="headerlink" href="#content-i-e-feature-branch3" title="Link to this heading">#</a></h2>
+<p>There is a very valid reason for deploying your website from a non-main branch though, i.e. commonly termed feature branch<a class="footnote-reference brackets" href="#id8" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>.</p>
 <p>The argument for doing so is to keep the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch of your forked repository <code class="docutils literal notranslate"><span class="pre">https://github.com/&lt;user&gt;/data-science-for-esm</span></code> synchronized/identical to <code class="docutils literal notranslate"><span class="pre">main</span></code> branch of the upstream <code class="docutils literal notranslate"><span class="pre">https://github.com/fneum/data-science-for-esm</span></code> repository.</p>
 <p>In particular, this approach facilitates comparing the fork and the upstream, retrieving updates/patches, and also allows you to “reset” your fork, if/when something has gone completely wrong with the content development.</p>
 <p>A simple workflow of keeping you fork’s <code class="docutils literal notranslate"><span class="pre">main</span></code> up-to-date with the upstream <code class="docutils literal notranslate"><span class="pre">main</span></code> is:</p>
@@ -458,17 +458,21 @@ document.write(`
 <!-- # Internal Doc References -->
 <hr class="footnotes docutils" />
 <aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id4" role="doc-footnote">
+<aside class="footnote brackets" id="id5" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>In this example it is the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch.</p>
 </aside>
-<aside class="footnote brackets" id="id5" role="doc-footnote">
+<aside class="footnote brackets" id="id6" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
 <p><span style="font-size:.8em;">The workflow has been successfully tested using the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch, as well as the side-branches, once correctly specifying the branch, and the permissions, in the <code class="docutils literal notranslate"><span class="pre">deploy.yml</span></code>, as explained above.</span></p>
 </aside>
-<aside class="footnote brackets" id="id6" role="doc-footnote">
+<aside class="footnote brackets" id="id7" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
-<p>In this material the <code class="docutils literal notranslate"><span class="pre">feature</span></code> branch is termed <code class="docutils literal notranslate"><span class="pre">content_branch</span></code></p>
+<p><strong><font color='red'>This section is intended for </font></strong> <mark style="background-color: red; color: black"><b>advanced use</b></mark></p>
+</aside>
+<aside class="footnote brackets" id="id8" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<p>In this material the feature branch is defined as <code class="docutils literal notranslate"><span class="pre">content_branch</span></code>.</p>
 </aside>
 </aside>
 </section>
@@ -538,7 +542,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#content-i-e-feature-branch">Content (i.e. feature) branch</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#content-i-e-feature-branch3">Content (i.e. feature) branch</a></li>
 </ul>
   </nav></div>
 
