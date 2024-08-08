@@ -395,11 +395,11 @@ document.write(`
 <p>This section is intended for advanced users, who would like to:</p>
 <ol class="arabic simple">
 <li><p>deploy their website from a so-called feature branch,</p></li>
-<li><p>keep the main branch synchronized with the original source, i.e. upstream.</p></li>
+<li><p>keep the main branch synchronized with the original source, i.e. the upstream.</p></li>
 </ol>
-<p>There is a very valid reason why one would want to deploy your website from a non-main branch, i.e. commonly termed a feature branch.</p>
-<p>The argument for doing so is to keep the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch of your forked repository <code class="docutils literal notranslate"><span class="pre">https://github.com/&lt;user&gt;/data-science-for-esm</span></code> synchronized/identical to the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch of the upstream <code class="docutils literal notranslate"><span class="pre">https://github.com/fneum/data-science-for-esm</span></code> repository.</p>
-<p>In particular, this approach facilitates comparing the fork and the upstream, retrieving updates/patches, and also allows you <ins>resetting</ins> your fork, in case something gone completely wrong.</p>
+<p>There is a valid reason why one would want the website deploying from a non-main branch, i.e. commonly termed a feature branch.</p>
+<p>The argument for doing so is to keep the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch of your fork <code class="docutils literal notranslate"><span class="pre">https://github.com/&lt;user&gt;/data-science-for-esm</span></code> synchronized/identical to the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch of the upstream <code class="docutils literal notranslate"><span class="pre">https://github.com/fneum/data-science-for-esm</span></code> repository.</p>
+<p>In particular, this approach facilitates comparing the fork and the upstream, retrieving updates/patches, and also allows you <ins>resetting</ins> your fork, in case something has gone completely wrong.</p>
 <p>A simple workflow of keeping your fork’s <code class="docutils literal notranslate"><span class="pre">main</span></code> up-to-date with the upstream <code class="docutils literal notranslate"><span class="pre">main</span></code> is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">fneum</span><span class="o">/</span><span class="n">data</span><span class="o">-</span><span class="n">science</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">esm</span>
 <span class="n">git</span> <span class="n">pull</span> <span class="n">upstream</span> <span class="n">main</span>
