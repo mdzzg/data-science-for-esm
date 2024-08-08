@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Requirements &#8212; Data Science for Energy System Modelling</title>
+    <title>Modify the Content &#8212; Data Science for Energy System Modelling</title>
   
   
   
@@ -57,12 +57,12 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'BYOC/02_Requirements';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'BYOC/07_Content';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Create a New Fork" href="03_Fork.html" />
-    <link rel="prev" title="Educators Build Your Own Content" href="01_Intro.html" />
+    <link rel="next" title="GitHub Workflow Deployment" href="08_Workflow.html" />
+    <link rel="prev" title="Content (i.e. feature) Branch" href="06_Deploy_Advanced.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -182,12 +182,12 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="01_Intro.html">Educators Build Your Own Content</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_Requirements.html">Requirements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="03_Fork.html">Create a New Fork</a></li>
 <li class="toctree-l2"><a class="reference internal" href="04_GH_Pages.html">GitHub Pages Setting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="05_Deploy.html">Deployment Settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="06_Deploy_Advanced.html">Advanced Deployment Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="07_Content.html">Modify the Content</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Modify the Content</a></li>
 <li class="toctree-l2"><a class="reference internal" href="08_Workflow.html">GitHub Workflow Deployment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="09_Ref.html">References</a></li>
 </ul>
@@ -263,7 +263,7 @@
       
       
       
-      <li><a href="https://github.com/fneum/data-science-for-esm/issues/new?title=Issue%20on%20page%20%2FBYOC/02_Requirements.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/fneum/data-science-for-esm/issues/new?title=Issue%20on%20page%20%2FBYOC/07_Content.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -293,7 +293,7 @@
       
       
       
-      <li><a href="../_sources/BYOC/02_Requirements.md" target="_blank"
+      <li><a href="../_sources/BYOC/07_Content.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -364,9 +364,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -377,19 +375,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Requirements</h1>
+    <h1>Modify the Content</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git">Git</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -399,55 +389,90 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="requirements">
-<h1>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h1>
-<p>For a successful workflow run, the <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/e52f7980165928a7cd90826ee0bf8cd3fb407892/environment.yaml">correct python environment</a>, with all of the <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/blob/e52f7980165928a7cd90826ee0bf8cd3fb407892/requirements.txt">python package dependencies</a> included, is required<a class="footnote-reference brackets" href="#id4" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
-<p>Our suggestion is adopting the package manager <code class="docutils literal notranslate"><span class="pre">mamba</span></code> (or <code class="docutils literal notranslate"><span class="pre">conda</span></code>), which for installation instructions are provided in the <a class="reference external" href="https://github.com/conda-forge/miniforge?tab=readme-ov-file">Miniforge GitHub repository</a>, as well as in the <a class="reference external" href="https://pypsa-earth.readthedocs.io/en/latest/installation.html">PyPSA-Earth documentation</a>.</p>
+  <!-- Content and Structure
+================================ -->
+<!-- ```{contents}
+:local:
+:depth: 1
+``` -->
+<p><span style="font-size:2.25em;">Anatomy of a Jupyter Book</span></p>
+<!-- -------------------------- -->
+<p><strong>Three things</strong> are needed for building a <a class="reference external" href="https://jupyterbook.org/en/stable/start/create.html#">Jupyter Book</a>:</p>
 <ul class="simple">
-<li><p>There is no need for the BAU:</p></li>
+<li><p>A configuration file (<a class="reference external" href="https://github.com/fneum/data-science-for-esm/blob/bc6e35f5c007a33972d23d1df7e26c59f2a875dd/data-science-for-esm/_config.yml">_config.yml</a>)</p></li>
+<li><p>A table of contents file (<a class="reference external" href="https://github.com/fneum/data-science-for-esm/blob/bc6e35f5c007a33972d23d1df7e26c59f2a875dd/data-science-for-esm/_toc.yml">_toc.yml</a>)</p></li>
+<li><p>Your book’s <a class="reference external" href="https://jupyterbook.org/en/stable/file-types/index.html">source files</a></p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mamba</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="s1">&#39;new_venv&#39;</span>
-<span class="n">mamba</span> <span class="n">activate</span> <span class="n">new_venv</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
-</pre></div>
-</div>
-<p>when installing the package dependencies, since the</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mamba</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">envs</span><span class="o">/</span><span class="n">environment</span><span class="o">.</span><span class="n">yaml</span>
-</pre></div>
-</div>
-<p>takes care of both the correct <code class="docutils literal notranslate"><span class="pre">venv</span></code> creation, and the packages installation. The only package requiring <code class="docutils literal notranslate"><span class="pre">pip</span></code> is the <code class="docutils literal notranslate"><span class="pre">highspy</span></code> solver. We highly recommend using <code class="docutils literal notranslate"><span class="pre">highspy</span></code>, and for that <code class="docutils literal notranslate"><span class="pre">pip</span></code> is needed:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">pip</span> <span class="o">-</span><span class="n">y</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="n">highspy</span>
-</pre></div>
-</div>
-<p>Python and Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) are optimally used in an IDE.</p>
-<p>Our recommendation is <a class="reference external" href="https://github.com/microsoft/vscode">VSCode</a><a class="footnote-reference brackets" href="#id5" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, together with the <code class="docutils literal notranslate"><span class="pre">Jupyter</span></code> <a class="reference external" href="https://medium.com/&#64;claudia.nikel/how-to-setup-a-jupyter-notebook-in-vs-code-w-virtual-env-kernels-install-packages-884cf643375e">extension</a>.</p>
-<section id="git">
-<h2>Git<a class="headerlink" href="#git" title="Link to this heading">#</a></h2>
-<p>To follow this tutorial, basic usage of <a class="reference external" href="https://www.atlassian.com/git">Git</a> is a pre requirement. It is strongly recommended to refresh<a class="footnote-reference brackets" href="#id6" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> your Git basics, before moving forwards.</p>
-<p>Besides the aforementioned Atlassian source, <a class="reference external" href="https://pypsa-earth.readthedocs.io/en/latest/software_hints.html#git">this</a> is the PyPSA Earth Git reference, and these are some fun, information rich, YouTube Git video tutorials:</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<!-- :class: attention -->
+<p><code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code> builds Jupyter Book off of a content source:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=HVsySz-h9r4">Git Tutorial for Beginners: Command-Line Fundamentals</a></p></li>
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=mJ-qvsxPHpY">Git Tutorial For Dummies</a></p></li>
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=USjZcfj8yxE">Learn Git in 15 Minutes</a>.</p></li>
+<li><p><b><mark style="background-color: peachpuff; color: black">Jupyter Notebook (.ipynb)</mark></b> and</p></li>
+<li><p><b><mark style="background-color: peachpuff; color: black">Markdown (.md)</mark></b> files.</p></li>
 </ul>
-<!-- # Internal Doc References -->
+<!-- > <br />
+\ -->
+<div class="tip admonition">
+<p class="admonition-title">Supported files</p>
+<p>For the full list of the available file formats go to the <a class="reference external" href="https://jupyterbook.org/en/stable/file-types/index.html">JupyterBook</a>.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Jupyter Notebook</p>
+<p>Jupyter Notebook files can also contain markdown. For more refer to the <a class="reference external" href="https://executablebooks.github.io/cookiecutter-jupyter-book/notebooks.html">MyST</a>.</p>
+</div>
+</div>
+<p>Use the files presented here as the template of your Jupyter Book, as they will reduce your content development time.</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> and the <code class="docutils literal notranslate"><span class="pre">.md</span></code> content files are to be located in the root, or a subfolder, of the cloned <code class="docutils literal notranslate"><span class="pre">data-science-for-esm</span></code>, and specified accordingly in the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code><a class="footnote-reference brackets" href="#id4" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p></li>
+<li><p>Both the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>, as well as the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> are to remain in the root of the <code class="docutils literal notranslate"><span class="pre">data-science-for-esm</span></code> folder.</p></li>
+<li><p>The website logo, as well as the other figures can be placed in the <code class="docutils literal notranslate"><span class="pre">data-science-for-esm/_images/</span></code> <a class="reference external" href="https://github.com/open-energy-transition/data-science-for-esm/tree/ce07272ac531acdbe4b6e18110c5fbc70f3b03c0/data-science-for-esm/_images">folder</a>.
+<br />
+<br /></p></li>
+</ul>
+<section class="tex2jax_ignore mathjax_ignore" id="modify-the-content">
+<h1>Modify the Content<a class="headerlink" href="#modify-the-content" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p><strong><ins>Modify the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> and the <code class="docutils literal notranslate"><span class="pre">.md</span></code> files as seen fit. They are the core-content.</ins></strong></p></li>
+<li><p><strong>When changing the images and modifying the content files, the referencing throughout the <code class="docutils literal notranslate"><span class="pre">.md</span></code> and the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files needs changing as well<a class="footnote-reference brackets" href="#id5" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</strong></p></li>
+</ul>
+<p>To have the content changes reflected in the website, there is a chain of <strong>git</strong> to-do commands:</p>
+<!-- git clone https://github.com/"owner"/data-science-for-esm.git -->
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># make changes to the content</span>
+<span class="n">git</span> <span class="n">status</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;new changes applied&#39;</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">content_branch</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The metadata of the website, such as the author, logo, and other relevant GitHub and Google Colab links, are to be defined in the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code><a class="footnote-reference brackets" href="#id6" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>:</p>
+<ul>
+<li><p>Use the already provided <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> and <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> files as a template, and follow their structure.</p></li>
+</ul>
+</li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">data-science-for-esm/_toc.yml</span></code> <a class="reference external" href="https://github.com/fneum/data-science-for-esm/blob/bc6e35f5c007a33972d23d1df7e26c59f2a875dd/data-science-for-esm/_toc.yml">file</a>, a sequence of files to be included in the Jupyter Book, and the GitHub Page, is defined, and further used by the <code class="docutils literal notranslate"><span class="pre">jupyter-build</span> <span class="pre">book</span></code> command.</p>
+<ul>
+<li><p>Detailed customization instructions on both the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> and the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> are provided in <a class="reference external" href="https://jupyterbook.org/en/stable/structure/configure.html">link</a> and <a class="reference external" href="https://jupyterbook.org/en/stable/structure/toc.html">link</a>. <strong><font color='red'>⇶ MUST READ!</font></strong></p></li>
+</ul>
+</li>
+</ul>
+<p>After a successful run, the TOC will be displayed in the left-side menu of the website.</p>
 <hr class="footnotes docutils" />
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id4" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>Your Python <code class="docutils literal notranslate"><span class="pre">venv</span></code> can very, depending on the Jupyter Notebooks’ content.</p>
+<p>If not being placed in the root folder, or subfolder, the workflow will be unable to find the files specified by the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>, resulting in the unsuccessful deployment, and unaccessible <code class="docutils literal notranslate"><span class="pre">https://&lt;user&gt;.github.io/data-science-for-esm</span></code>.</p>
 </aside>
 <aside class="footnote brackets" id="id5" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
-<p><b><font color='red'>Also used by the <a class="reference external" href="https://pypsa-earth.readthedocs.io/en/latest/installation.html">PyPSA developers</a>, due to its simplicity, and being open-source.</font></b></p>
+<p><strong><font color='red'>Otherwise workflow deployment will break!</font></strong></p>
 </aside>
 <aside class="footnote brackets" id="id6" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
-<p>That is, in case you aren’t a day-to-day user.</p>
+<p><a class="reference external" href="https://jupyterbook.org/en/stable/start/create.html#book-configuration-config-yml">https://jupyterbook.org/en/stable/start/create.html#book-configuration-config-yml</a></p>
 </aside>
 </aside>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -481,20 +506,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="01_Intro.html"
+       href="06_Deploy_Advanced.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Educators Build Your Own Content</p>
+        <p class="prev-next-title">Content (i.e. feature) Branch</p>
       </div>
     </a>
     <a class="right-next"
-       href="03_Fork.html"
+       href="08_Workflow.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Create a New Fork</p>
+        <p class="prev-next-title">GitHub Workflow Deployment</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -504,21 +529,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git">Git</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
