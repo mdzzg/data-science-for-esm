@@ -156,8 +156,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Data Science for Energy System Modelling - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Data Science for Energy System Modelling - Home"/>`);</script>
+    <img src="../_static/TUBlogo.png" class="logo__image only-light" alt="Data Science for Energy System Modelling - Home"/>
+    <script>document.write(`<img src="../_static/TUBlogo.png" class="logo__image only-dark" alt="Data Science for Energy System Modelling - Home"/>`);</script>
   
   
 </a></div>
@@ -493,7 +493,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;network-cem.nc&#39;, &lt;http.client.HTTPMessage at 0x7fde5b8f3850&gt;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;network-cem.nc&#39;, &lt;http.client.HTTPMessage at 0x7f64258ca990&gt;)
 </pre></div>
 </div>
 </div>
@@ -980,7 +980,7 @@ COP(\Delta T) = 6.81 - 0.121 \Delta T + 0.00063^\Delta T^2
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fde544901d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f64202b0fd0&gt;
 </pre></div>
 </div>
 <img alt="../_images/993226fc1c5907bb10ee8c8aaa2aa5ba250109b42eacf4f4ae0e019810356c8c.png" src="../_images/993226fc1c5907bb10ee8c8aaa2aa5ba250109b42eacf4f4ae0e019810356c8c.png" />
@@ -1189,13 +1189,13 @@ Index([&#39;electrolysis&#39;, &#39;fuel cell&#39;, &#39;heat pump&#39;, &#39;re
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:   0%|          | 0/27 [00:00&lt;?, ?it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:  48%|████▊     | 13/27 [00:00&lt;00:00, 102.73it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:  44%|████▍     | 12/27 [00:00&lt;00:00, 117.48it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:  89%|████████▉ | 24/27 [00:00&lt;00:00, 83.08it/s] 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:  89%|████████▉ | 24/27 [00:00&lt;00:00, 73.57it/s] 
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.: 100%|██████████| 27/27 [00:00&lt;00:00, 66.34it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.: 100%|██████████| 27/27 [00:00&lt;00:00, 60.20it/s]
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -1204,10 +1204,10 @@ Index([&#39;electrolysis&#39;, &#39;fuel cell&#39;, &#39;heat pump&#39;, &#39;re
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing continuous variables.:   0%|          | 0/11 [00:00&lt;?, ?it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing continuous variables.: 100%|██████████| 11/11 [00:00&lt;00:00, 143.77it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing continuous variables.: 100%|██████████| 11/11 [00:00&lt;00:00, 127.29it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.io: Writing time: 0.5s
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.io: Writing time: 0.56s
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.solvers:Log file at /tmp/highs.log
@@ -1215,6 +1215,31 @@ Index([&#39;electrolysis&#39;, &#39;fuel cell&#39;, &#39;heat pump&#39;, &#39;re
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running HiGHS 1.7.2 (git hash: 184e327): Copyright (c) 2024 HiGHS under MIT licence terms
 Coefficient ranges:
+  Matrix [1e-04, 6e+00]
+  Cost   [4e-02, 3e+05]
+  Bound  [0e+00, 0e+00]
+  RHS    [2e+03, 1e+08]
+Presolving model
+47129 rows, 42760 cols, 119487 nonzeros  0s
+40560 rows, 34001 cols, 104159 nonzeros  0s
+38370 rows, 29621 cols, 97589 nonzeros  0s
+Presolve : Reductions: rows 38370(-55811); columns 29621(-14190); elements 97589(-70001)
+Solving the presolved LP
+Using EKK dual simplex solver - serial
+  Iteration        Objective     Infeasibilities num(sum)
+          0     0.0000000000e+00 Ph1: 0(0) 0s
+      20172     5.3796951797e+10 Pr: 7263(7.91341e+13); Du: 0(2.61714e-06) 5s
+      33754     1.2129041006e+11 Pr: 0(0); Du: 0(4.03079e-13) 10s
+      33754     1.2129041006e+11 Pr: 0(0); Du: 0(4.03079e-13) 10s
+Solving the original LP from the solution after postsolve
+Using EKK dual simplex solver - serial
+  Iteration        Objective     Infeasibilities num(sum)
+      33754     1.2129041006e+11 Pr: 1256(0.000766981); Du: 0(2.89776e-08) 10s
+      37118     1.2129041006e+11 Pr: 0(0) 13s
+Model   status      : Optimal
+Simplex   iterations: 37118
+Objective value     :  1.2129041006e+11
+HiGHS run time      :         12.84
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.constants: Optimization successful: 
@@ -1229,32 +1254,7 @@ Solver message: optimal
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:pypsa.optimization.optimize:The shadow-prices of the constraints Generator-ext-p-lower, Generator-ext-p-upper, Link-fix-p-lower, Link-fix-p-upper, Link-ext-p-lower, Link-ext-p-upper, Store-fix-e-lower, Store-fix-e-upper, Store-ext-e-lower, Store-ext-e-upper, StorageUnit-ext-p_dispatch-lower, StorageUnit-ext-p_dispatch-upper, StorageUnit-ext-p_store-lower, StorageUnit-ext-p_store-upper, StorageUnit-ext-state_of_charge-lower, StorageUnit-ext-state_of_charge-upper, StorageUnit-energy_balance, Store-energy_balance were not assigned to the network.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Matrix [1e-04, 6e+00]
-  Cost   [4e-02, 3e+05]
-  Bound  [0e+00, 0e+00]
-  RHS    [2e+03, 1e+08]
-Presolving model
-47129 rows, 42760 cols, 119487 nonzeros  0s
-40560 rows, 34001 cols, 104159 nonzeros  0s
-38370 rows, 29621 cols, 97589 nonzeros  0s
-Presolve : Reductions: rows 38370(-55811); columns 29621(-14190); elements 97589(-70001)
-Solving the presolved LP
-Using EKK dual simplex solver - serial
-  Iteration        Objective     Infeasibilities num(sum)
-          0     0.0000000000e+00 Ph1: 0(0) 0s
-      21158     7.2645696784e+10 Pr: 6234(4.1166e+12); Du: 0(2.61714e-06) 5s
-      33754     1.2129041006e+11 Pr: 0(0); Du: 0(4.03079e-13) 9s
-      33754     1.2129041006e+11 Pr: 0(0); Du: 0(4.03079e-13) 9s
-Solving the original LP from the solution after postsolve
-Using EKK dual simplex solver - serial
-  Iteration        Objective     Infeasibilities num(sum)
-      33754     1.2129041006e+11 Pr: 1256(0.000766981); Du: 0(2.89776e-08) 9s
-      37118     1.2129041006e+11 Pr: 0(0) 11s
-Model   status      : Optimal
-Simplex   iterations: 37118
-Objective value     :  1.2129041006e+11
-HiGHS run time      :         11.43
-Writing the solution to /tmp/linopy-solve-n7dj14k2.sol
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing the solution to /tmp/linopy-solve-jo_o8kq_.sol
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;ok&#39;, &#39;optimal&#39;)

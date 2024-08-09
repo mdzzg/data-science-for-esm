@@ -156,8 +156,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Data Science for Energy System Modelling - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Data Science for Energy System Modelling - Home"/>`);</script>
+    <img src="../_static/TUBlogo.png" class="logo__image only-light" alt="Data Science for Energy System Modelling - Home"/>
+    <script>document.write(`<img src="../_static/TUBlogo.png" class="logo__image only-dark" alt="Data Science for Energy System Modelling - Home"/>`);</script>
   
   
 </a></div>
@@ -571,13 +571,13 @@ document.write(`
 <h2>From structured data to optimisation<a class="headerlink" href="#from-structured-data-to-optimisation" title="Link to this heading">#</a></h2>
 <p>The design principle of PyPSA is that basically each component is associated with a set of variables and constraints that will be added to the optimisation model based on the input data stored for the components.</p>
 <p>For an <em>hourly</em> electricity market simulation, PyPSA will solve an optimisation problem that looks like this</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9dc27ced-ab05-4999-9119-44072ce2b41b">
-<span class="eqno">(12)<a class="headerlink" href="#equation-9dc27ced-ab05-4999-9119-44072ce2b41b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6119807d-5054-4af9-8405-4787849ce3ec">
+<span class="eqno">(12)<a class="headerlink" href="#equation-6119807d-5054-4af9-8405-4787849ce3ec" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \min_{g_{i,s,t}; f_{\ell,t}; g_{i,r,t,\text{charge}}; g_{i,r,t,\text{discharge}}; e_{i,r,t}} \sum_s o_{s} g_{i,s,t}
 \end{equation}\]</div>
 <p>such that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9a6fea2c-bf36-448e-97e9-813e259e6a25">
-<span class="eqno">(13)<a class="headerlink" href="#equation-9a6fea2c-bf36-448e-97e9-813e259e6a25" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-174e780c-0304-4c4c-9c85-b2a889238872">
+<span class="eqno">(13)<a class="headerlink" href="#equation-174e780c-0304-4c4c-9c85-b2a889238872" title="Permalink to this equation">#</a></span>\[\begin{align}
 0 &amp; \leq g_{i,s,t} \leq \hat{g}_{i,s,t} G_{i,s}  &amp; \text{generation limits : generator} \\
 -F_\ell &amp;\leq f_{\ell,t} \leq F_\ell &amp; \text{transmission limits : line}  \\
 d_{i,t} &amp;= \sum_s g_{i,s,t} + \sum_r g_{i,r,t,\text{discharge}} - \sum_r g_{i,r,t,\text{charge}} - \sum_\ell K_{i\ell} f_{\ell,t} &amp; \text{KCL : bus} \\
@@ -1314,14 +1314,6 @@ facecolor will have no effect as it has been defined as &quot;never&quot;.
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following loads have carriers which are not defined:
-Index([&#39;SA electricity demand&#39;, &#39;MZ electricity demand&#39;], dtype=&#39;object&#39;, name=&#39;Load&#39;)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following lines have carriers which are not defined:
-Index([&#39;SA-MZ&#39;], dtype=&#39;object&#39;, name=&#39;Line&#39;)
-</pre></div>
-</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:Encountered nan&#39;s in static data for columns [&#39;co2_emissions&#39;] of component &#39;Carrier&#39;.
 </pre></div>
 </div>
@@ -1342,6 +1334,14 @@ Index([&#39;SA-MZ&#39;], dtype=&#39;object&#39;, name=&#39;Line&#39;)
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following buses have carriers which are not defined:
 Index([&#39;SA&#39;, &#39;MZ&#39;], dtype=&#39;object&#39;, name=&#39;Bus&#39;)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following loads have carriers which are not defined:
+Index([&#39;SA electricity demand&#39;, &#39;MZ electricity demand&#39;], dtype=&#39;object&#39;, name=&#39;Load&#39;)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following lines have carriers which are not defined:
+Index([&#39;SA-MZ&#39;], dtype=&#39;object&#39;, name=&#39;Line&#39;)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.model: Solve problem using Highs solver
@@ -1379,7 +1379,7 @@ Solving the original LP from the solution after postsolve
 Model   status      : Optimal
 Objective value     :  1.3813912524e+06
 HiGHS run time      :          0.00
-Writing the solution to /tmp/linopy-solve-daw2lprd.sol
+Writing the solution to /tmp/linopy-solve-w9bsaut0.sol
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;ok&#39;, &#39;optimal&#39;)
@@ -1652,8 +1652,8 @@ Writing the solution to /tmp/linopy-solve-daw2lprd.sol
 facecolor will have no effect as it has been defined as &quot;never&quot;.
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;matplotlib.collections.PatchCollection at 0x7f14f6e4dfd0&gt;,
- &lt;matplotlib.collections.LineCollection at 0x7f14f6e4d410&gt;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;matplotlib.collections.PatchCollection at 0x7fad07b93050&gt;,
+ &lt;matplotlib.collections.LineCollection at 0x7fad05680a50&gt;)
 </pre></div>
 </div>
 <img alt="../_images/bd1d7e3536c8a7c76c20ea7b38c2cfd09348cf0ac79851aceecb3a108700ff4e.png" src="../_images/bd1d7e3536c8a7c76c20ea7b38c2cfd09348cf0ac79851aceecb3a108700ff4e.png" />
@@ -1943,6 +1943,17 @@ facecolor will have no effect as it has been defined as &quot;never&quot;.
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:Encountered nan&#39;s in static data for columns [&#39;co2_emissions&#39;] of component &#39;Carrier&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following sub_networks have carriers which are not defined:
+Index([&#39;0&#39;], dtype=&#39;object&#39;, name=&#39;SubNetwork&#39;)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following buses have carriers which are not defined:
+Index([&#39;SA&#39;, &#39;MZ&#39;], dtype=&#39;object&#39;, name=&#39;Bus&#39;)
+</pre></div>
+</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following loads have carriers which are not defined:
 Index([&#39;SA electricity demand&#39;, &#39;MZ electricity demand&#39;], dtype=&#39;object&#39;, name=&#39;Load&#39;)
 </pre></div>
@@ -1954,12 +1965,12 @@ Index([&#39;SA-MZ&#39;], dtype=&#39;object&#39;, name=&#39;Line&#39;)
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:Encountered nan&#39;s in static data for columns [&#39;co2_emissions&#39;] of component &#39;Carrier&#39;.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following buses have carriers which are not defined:
-Index([&#39;SA&#39;, &#39;MZ&#39;], dtype=&#39;object&#39;, name=&#39;Bus&#39;)
-</pre></div>
-</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following sub_networks have carriers which are not defined:
 Index([&#39;0&#39;], dtype=&#39;object&#39;, name=&#39;SubNetwork&#39;)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following buses have carriers which are not defined:
+Index([&#39;SA&#39;, &#39;MZ&#39;], dtype=&#39;object&#39;, name=&#39;Bus&#39;)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following loads have carriers which are not defined:
@@ -1968,17 +1979,6 @@ Index([&#39;SA electricity demand&#39;, &#39;MZ electricity demand&#39;], dtype=
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following lines have carriers which are not defined:
 Index([&#39;SA-MZ&#39;], dtype=&#39;object&#39;, name=&#39;Line&#39;)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:Encountered nan&#39;s in static data for columns [&#39;co2_emissions&#39;] of component &#39;Carrier&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following buses have carriers which are not defined:
-Index([&#39;SA&#39;, &#39;MZ&#39;], dtype=&#39;object&#39;, name=&#39;Bus&#39;)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following sub_networks have carriers which are not defined:
-Index([&#39;0&#39;], dtype=&#39;object&#39;, name=&#39;SubNetwork&#39;)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.model: Solve problem using Highs solver
@@ -2016,7 +2016,7 @@ Solving the original LP from the solution after postsolve
 Model   status      : Optimal
 Objective value     :  1.3986326317e+06
 HiGHS run time      :          0.00
-Writing the solution to /tmp/linopy-solve-fpcv_muq.sol
+Writing the solution to /tmp/linopy-solve-nq3q_p17.sol
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;ok&#39;, &#39;optimal&#39;)
@@ -2186,6 +2186,17 @@ Writing the solution to /tmp/linopy-solve-fpcv_muq.sol
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:Encountered nan&#39;s in static data for columns [&#39;co2_emissions&#39;] of component &#39;Carrier&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following sub_networks have carriers which are not defined:
+Index([&#39;0&#39;], dtype=&#39;object&#39;, name=&#39;SubNetwork&#39;)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following buses have carriers which are not defined:
+Index([&#39;SA&#39;, &#39;MZ&#39;], dtype=&#39;object&#39;, name=&#39;Bus&#39;)
+</pre></div>
+</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following loads have carriers which are not defined:
 Index([&#39;SA electricity demand&#39;, &#39;MZ electricity demand&#39;], dtype=&#39;object&#39;, name=&#39;Load&#39;)
 </pre></div>
@@ -2197,12 +2208,12 @@ Index([&#39;SA-MZ&#39;], dtype=&#39;object&#39;, name=&#39;Line&#39;)
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:Encountered nan&#39;s in static data for columns [&#39;co2_emissions&#39;] of component &#39;Carrier&#39;.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following buses have carriers which are not defined:
-Index([&#39;SA&#39;, &#39;MZ&#39;], dtype=&#39;object&#39;, name=&#39;Bus&#39;)
-</pre></div>
-</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following sub_networks have carriers which are not defined:
 Index([&#39;0&#39;], dtype=&#39;object&#39;, name=&#39;SubNetwork&#39;)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following buses have carriers which are not defined:
+Index([&#39;SA&#39;, &#39;MZ&#39;], dtype=&#39;object&#39;, name=&#39;Bus&#39;)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following loads have carriers which are not defined:
@@ -2211,17 +2222,6 @@ Index([&#39;SA electricity demand&#39;, &#39;MZ electricity demand&#39;], dtype=
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following lines have carriers which are not defined:
 Index([&#39;SA-MZ&#39;], dtype=&#39;object&#39;, name=&#39;Line&#39;)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:Encountered nan&#39;s in static data for columns [&#39;co2_emissions&#39;] of component &#39;Carrier&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following buses have carriers which are not defined:
-Index([&#39;SA&#39;, &#39;MZ&#39;], dtype=&#39;object&#39;, name=&#39;Bus&#39;)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following sub_networks have carriers which are not defined:
-Index([&#39;0&#39;], dtype=&#39;object&#39;, name=&#39;SubNetwork&#39;)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.model: Solve problem using Highs solver
@@ -2260,7 +2260,7 @@ Solving the original LP from the solution after postsolve
 Model   status      : Optimal
 Objective value     :  2.1206212849e+06
 HiGHS run time      :          0.00
-Writing the solution to /tmp/linopy-solve-v_lehtta.sol
+Writing the solution to /tmp/linopy-solve-i68h_v4c.sol
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;ok&#39;, &#39;optimal&#39;)
@@ -2409,6 +2409,17 @@ Name: mu, dtype: float64
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:Encountered nan&#39;s in static data for columns [&#39;co2_emissions&#39;] of component &#39;Carrier&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following sub_networks have carriers which are not defined:
+Index([&#39;0&#39;], dtype=&#39;object&#39;, name=&#39;SubNetwork&#39;)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following buses have carriers which are not defined:
+Index([&#39;SA&#39;, &#39;MZ&#39;], dtype=&#39;object&#39;, name=&#39;Bus&#39;)
+</pre></div>
+</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following loads have carriers which are not defined:
 Index([&#39;SA electricity demand&#39;, &#39;MZ electricity demand&#39;], dtype=&#39;object&#39;, name=&#39;Load&#39;)
 </pre></div>
@@ -2420,12 +2431,12 @@ Index([&#39;SA-MZ&#39;], dtype=&#39;object&#39;, name=&#39;Line&#39;)
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:Encountered nan&#39;s in static data for columns [&#39;co2_emissions&#39;] of component &#39;Carrier&#39;.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following buses have carriers which are not defined:
-Index([&#39;SA&#39;, &#39;MZ&#39;], dtype=&#39;object&#39;, name=&#39;Bus&#39;)
-</pre></div>
-</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following sub_networks have carriers which are not defined:
 Index([&#39;0&#39;], dtype=&#39;object&#39;, name=&#39;SubNetwork&#39;)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following buses have carriers which are not defined:
+Index([&#39;SA&#39;, &#39;MZ&#39;], dtype=&#39;object&#39;, name=&#39;Bus&#39;)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following loads have carriers which are not defined:
@@ -2434,17 +2445,6 @@ Index([&#39;SA electricity demand&#39;, &#39;MZ electricity demand&#39;], dtype=
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following lines have carriers which are not defined:
 Index([&#39;SA-MZ&#39;], dtype=&#39;object&#39;, name=&#39;Line&#39;)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:Encountered nan&#39;s in static data for columns [&#39;co2_emissions&#39;] of component &#39;Carrier&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following buses have carriers which are not defined:
-Index([&#39;SA&#39;, &#39;MZ&#39;], dtype=&#39;object&#39;, name=&#39;Bus&#39;)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following sub_networks have carriers which are not defined:
-Index([&#39;0&#39;], dtype=&#39;object&#39;, name=&#39;SubNetwork&#39;)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.model: Solve problem using Highs solver
@@ -2476,7 +2476,7 @@ Problem status detected on presolve: Infeasible
 Model   status      : Infeasible
 Objective value     :  0.0000000000e+00
 HiGHS run time      :          0.00
-Writing the solution to /tmp/linopy-solve-98n0dstk.sol
+Writing the solution to /tmp/linopy-solve-rcsf1ev9.sol
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;warning&#39;, &#39;infeasible&#39;)
@@ -2509,7 +2509,7 @@ Writing the solution to /tmp/linopy-solve-98n0dstk.sol
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.io:Directory tmp does not exist, creating it
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:pypsa.io:Exported network tmp has carriers, loads, generators, lines, buses, global_constraints
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:pypsa.io:Exported network tmp has loads, generators, buses, lines, global_constraints, carriers
 </pre></div>
 </div>
 </div>
@@ -2533,7 +2533,7 @@ Writing the solution to /tmp/linopy-solve-98n0dstk.sol
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:pypsa.io:Exported network tmp.nc has carriers, loads, generators, lines, buses, global_constraints
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:pypsa.io:Exported network tmp.nc has loads, generators, buses, lines, global_constraints, carriers
 </pre></div>
 </div>
 </div>
@@ -2883,7 +2883,7 @@ facecolor will have no effect as it has been defined as &quot;never&quot;.
 facecolor will have no effect as it has been defined as &quot;never&quot;.
 </pre></div>
 </div>
-<img alt="../_images/fe41e31db29c3d72c5cac553b1ce2e53c1fd8ab740eb9160dd15597b384ae78a.png" src="../_images/fe41e31db29c3d72c5cac553b1ce2e53c1fd8ab740eb9160dd15597b384ae78a.png" />
+<img alt="../_images/8cbc40763f3aa58c84c1d2e5dcaf76d728e6e690e1062bbf423c6ab8905ecff0.png" src="../_images/8cbc40763f3aa58c84c1d2e5dcaf76d728e6e690e1062bbf423c6ab8905ecff0.png" />
 </div>
 </div>
 <p>This dataset also includes a few hydro storage units:</p>
@@ -3050,23 +3050,6 @@ facecolor will have no effect as it has been defined as &quot;never&quot;.
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following storage_units have carriers which are not defined:
-Index([&#39;100_220kV Pumped Hydro&#39;, &#39;114 Pumped Hydro&#39;, &#39;121 Pumped Hydro&#39;,
-       &#39;140 Pumped Hydro&#39;, &#39;141 Pumped Hydro&#39;, &#39;158 Pumped Hydro&#39;,
-       &#39;166 Pumped Hydro&#39;, &#39;205 Pumped Hydro&#39;, &#39;228 Pumped Hydro&#39;,
-       &#39;235 Pumped Hydro&#39;, &#39;25 Pumped Hydro&#39;, &#39;266 Pumped Hydro&#39;,
-       &#39;268 Pumped Hydro&#39;, &#39;279_220kV Pumped Hydro&#39;, &#39;293 Pumped Hydro&#39;,
-       &#39;320 Pumped Hydro&#39;, &#39;32_220kV Pumped Hydro&#39;, &#39;333 Pumped Hydro&#39;,
-       &#39;342 Pumped Hydro&#39;, &#39;343 Pumped Hydro&#39;, &#39;362_220kV Pumped Hydro&#39;,
-       &#39;368 Pumped Hydro&#39;, &#39;374 Pumped Hydro&#39;, &#39;379 Pumped Hydro&#39;,
-       &#39;389 Pumped Hydro&#39;, &#39;397 Pumped Hydro&#39;, &#39;423 Pumped Hydro&#39;,
-       &#39;424 Pumped Hydro&#39;, &#39;479 Pumped Hydro&#39;, &#39;481 Pumped Hydro&#39;,
-       &#39;493 Pumped Hydro&#39;, &#39;51 Pumped Hydro&#39;, &#39;63 Pumped Hydro&#39;,
-       &#39;66 Pumped Hydro&#39;, &#39;72 Pumped Hydro&#39;, &#39;78_220kV Pumped Hydro&#39;,
-       &#39;8 Pumped Hydro&#39;, &#39;98 Pumped Hydro&#39;],
-      dtype=&#39;object&#39;, name=&#39;StorageUnit&#39;)
-</pre></div>
-</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following transformers have zero r, which could break the linear load flow:
 Index([&#39;2&#39;, &#39;5&#39;, &#39;10&#39;, &#39;12&#39;, &#39;13&#39;, &#39;15&#39;, &#39;18&#39;, &#39;20&#39;, &#39;22&#39;, &#39;24&#39;, &#39;26&#39;, &#39;30&#39;,
        &#39;32&#39;, &#39;37&#39;, &#39;42&#39;, &#39;46&#39;, &#39;52&#39;, &#39;56&#39;, &#39;61&#39;, &#39;68&#39;, &#39;69&#39;, &#39;74&#39;, &#39;78&#39;, &#39;86&#39;,
@@ -3079,13 +3062,6 @@ Index([&#39;2&#39;, &#39;5&#39;, &#39;10&#39;, &#39;12&#39;, &#39;13&#39;, &#39;
        &#39;362&#39;, &#39;382&#39;, &#39;384&#39;, &#39;385&#39;, &#39;391&#39;, &#39;403&#39;, &#39;404&#39;, &#39;413&#39;, &#39;421&#39;, &#39;450&#39;,
        &#39;458&#39;],
       dtype=&#39;object&#39;, name=&#39;Transformer&#39;)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following lines have carriers which are not defined:
-Index([&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;, &#39;10&#39;,
-       ...
-       &#39;850&#39;, &#39;851&#39;, &#39;852&#39;, &#39;853&#39;, &#39;854&#39;, &#39;855&#39;, &#39;856&#39;, &#39;857&#39;, &#39;858&#39;, &#39;859&#39;],
-      dtype=&#39;object&#39;, name=&#39;Line&#39;, length=852)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following buses have carriers which are not defined:
@@ -3113,6 +3089,13 @@ Index([&#39;100_220kV Pumped Hydro&#39;, &#39;114 Pumped Hydro&#39;, &#39;121 Pu
       dtype=&#39;object&#39;, name=&#39;StorageUnit&#39;)
 </pre></div>
 </div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following lines have carriers which are not defined:
+Index([&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;, &#39;10&#39;,
+       ...
+       &#39;850&#39;, &#39;851&#39;, &#39;852&#39;, &#39;853&#39;, &#39;854&#39;, &#39;855&#39;, &#39;856&#39;, &#39;857&#39;, &#39;858&#39;, &#39;859&#39;],
+      dtype=&#39;object&#39;, name=&#39;Line&#39;, length=852)
+</pre></div>
+</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following transformers have zero r, which could break the linear load flow:
 Index([&#39;2&#39;, &#39;5&#39;, &#39;10&#39;, &#39;12&#39;, &#39;13&#39;, &#39;15&#39;, &#39;18&#39;, &#39;20&#39;, &#39;22&#39;, &#39;24&#39;, &#39;26&#39;, &#39;30&#39;,
        &#39;32&#39;, &#39;37&#39;, &#39;42&#39;, &#39;46&#39;, &#39;52&#39;, &#39;56&#39;, &#39;61&#39;, &#39;68&#39;, &#39;69&#39;, &#39;74&#39;, &#39;78&#39;, &#39;86&#39;,
@@ -3127,19 +3110,36 @@ Index([&#39;2&#39;, &#39;5&#39;, &#39;10&#39;, &#39;12&#39;, &#39;13&#39;, &#39;
       dtype=&#39;object&#39;, name=&#39;Transformer&#39;)
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following lines have carriers which are not defined:
-Index([&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;, &#39;10&#39;,
-       ...
-       &#39;850&#39;, &#39;851&#39;, &#39;852&#39;, &#39;853&#39;, &#39;854&#39;, &#39;855&#39;, &#39;856&#39;, &#39;857&#39;, &#39;858&#39;, &#39;859&#39;],
-      dtype=&#39;object&#39;, name=&#39;Line&#39;, length=852)
-</pre></div>
-</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following buses have carriers which are not defined:
 Index([&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;, &#39;10&#39;,
        ...
        &#39;382_220kV&#39;, &#39;384_220kV&#39;, &#39;385_220kV&#39;, &#39;391_220kV&#39;, &#39;403_220kV&#39;,
        &#39;404_220kV&#39;, &#39;413_220kV&#39;, &#39;421_220kV&#39;, &#39;450_220kV&#39;, &#39;458_220kV&#39;],
       dtype=&#39;object&#39;, name=&#39;Bus&#39;, length=585)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following storage_units have carriers which are not defined:
+Index([&#39;100_220kV Pumped Hydro&#39;, &#39;114 Pumped Hydro&#39;, &#39;121 Pumped Hydro&#39;,
+       &#39;140 Pumped Hydro&#39;, &#39;141 Pumped Hydro&#39;, &#39;158 Pumped Hydro&#39;,
+       &#39;166 Pumped Hydro&#39;, &#39;205 Pumped Hydro&#39;, &#39;228 Pumped Hydro&#39;,
+       &#39;235 Pumped Hydro&#39;, &#39;25 Pumped Hydro&#39;, &#39;266 Pumped Hydro&#39;,
+       &#39;268 Pumped Hydro&#39;, &#39;279_220kV Pumped Hydro&#39;, &#39;293 Pumped Hydro&#39;,
+       &#39;320 Pumped Hydro&#39;, &#39;32_220kV Pumped Hydro&#39;, &#39;333 Pumped Hydro&#39;,
+       &#39;342 Pumped Hydro&#39;, &#39;343 Pumped Hydro&#39;, &#39;362_220kV Pumped Hydro&#39;,
+       &#39;368 Pumped Hydro&#39;, &#39;374 Pumped Hydro&#39;, &#39;379 Pumped Hydro&#39;,
+       &#39;389 Pumped Hydro&#39;, &#39;397 Pumped Hydro&#39;, &#39;423 Pumped Hydro&#39;,
+       &#39;424 Pumped Hydro&#39;, &#39;479 Pumped Hydro&#39;, &#39;481 Pumped Hydro&#39;,
+       &#39;493 Pumped Hydro&#39;, &#39;51 Pumped Hydro&#39;, &#39;63 Pumped Hydro&#39;,
+       &#39;66 Pumped Hydro&#39;, &#39;72 Pumped Hydro&#39;, &#39;78_220kV Pumped Hydro&#39;,
+       &#39;8 Pumped Hydro&#39;, &#39;98 Pumped Hydro&#39;],
+      dtype=&#39;object&#39;, name=&#39;StorageUnit&#39;)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pypsa.consistency:The following lines have carriers which are not defined:
+Index([&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;, &#39;10&#39;,
+       ...
+       &#39;850&#39;, &#39;851&#39;, &#39;852&#39;, &#39;853&#39;, &#39;854&#39;, &#39;855&#39;, &#39;856&#39;, &#39;857&#39;, &#39;858&#39;, &#39;859&#39;],
+      dtype=&#39;object&#39;, name=&#39;Line&#39;, length=852)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.model: Solve problem using Highs solver
@@ -3151,16 +3151,16 @@ Index([&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:   0%|          | 0/15 [00:00&lt;?, ?it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:  13%|█▎        | 2/15 [00:00&lt;00:01, 11.81it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:  13%|█▎        | 2/15 [00:00&lt;00:01, 10.83it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:  27%|██▋       | 4/15 [00:00&lt;00:00, 14.87it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:  27%|██▋       | 4/15 [00:00&lt;00:00, 13.66it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:  87%|████████▋ | 13/15 [00:00&lt;00:00, 32.21it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.:  87%|████████▋ | 13/15 [00:00&lt;00:00, 29.14it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.: 100%|██████████| 15/15 [00:00&lt;00:00, 25.15it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing constraints.: 100%|██████████| 15/15 [00:00&lt;00:00, 22.91it/s]
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -3169,40 +3169,16 @@ Index([&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing continuous variables.:   0%|          | 0/6 [00:00&lt;?, ?it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing continuous variables.: 100%|██████████| 6/6 [00:00&lt;00:00, 62.11it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing continuous variables.:  50%|█████     | 3/6 [00:00&lt;00:00, 29.87it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.io: Writing time: 0.72s
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing continuous variables.: 100%|██████████| 6/6 [00:00&lt;00:00, 55.02it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.io: Writing time: 0.79s
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.solvers:Log file at /tmp/highs.log
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running HiGHS 1.7.2 (git hash: 184e327): Copyright (c) 2024 HiGHS under MIT licence terms
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Coefficient ranges:
-  Matrix [1e-02, 2e+02]
-  Cost   [3e+00, 1e+02]
-  Bound  [0e+00, 0e+00]
-  RHS    [2e-11, 6e+03]
-Presolving model
-18737 rows, 44750 cols, 113266 nonzeros  0s
-13259 rows, 39078 cols, 104782 nonzeros  0s
-12733 rows, 31722 cols, 97382 nonzeros  0s
-12702 rows, 31678 cols, 97289 nonzeros  0s
-Presolve : Reductions: rows 12702(-130266); columns 31678(-27962); elements 97289(-164009)
-Solving the presolved LP
-Using EKK dual simplex solver - serial
-  Iteration        Objective     Infeasibilities num(sum)
-          0     0.0000000000e+00 Ph1: 0(0) 0s
-      17377     9.1992880405e+06 Pr: 0(0); Du: 0(1.63425e-13) 5s
-      17377     9.1992880405e+06 Pr: 0(0); Du: 0(1.63425e-13) 5s
-Solving the original LP from the solution after postsolve
-Model   status      : Optimal
-Simplex   iterations: 17377
-Objective value     :  9.1992880405e+06
-HiGHS run time      :          5.30
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:linopy.constants: Optimization successful: 
@@ -3217,7 +3193,30 @@ Solver message: optimal
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:pypsa.optimization.optimize:The shadow-prices of the constraints Generator-fix-p-lower, Generator-fix-p-upper, Line-fix-s-lower, Line-fix-s-upper, Transformer-fix-s-lower, Transformer-fix-s-upper, StorageUnit-fix-p_dispatch-lower, StorageUnit-fix-p_dispatch-upper, StorageUnit-fix-p_store-lower, StorageUnit-fix-p_store-upper, StorageUnit-fix-state_of_charge-lower, StorageUnit-fix-state_of_charge-upper, Kirchhoff-Voltage-Law, StorageUnit-energy_balance were not assigned to the network.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing the solution to /tmp/linopy-solve-imlpnhoz.sol
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running HiGHS 1.7.2 (git hash: 184e327): Copyright (c) 2024 HiGHS under MIT licence terms
+Coefficient ranges:
+  Matrix [1e-02, 2e+02]
+  Cost   [3e+00, 1e+02]
+  Bound  [0e+00, 0e+00]
+  RHS    [2e-11, 6e+03]
+Presolving model
+18737 rows, 44750 cols, 115742 nonzeros  0s
+13266 rows, 39085 cols, 107646 nonzeros  0s
+12708 rows, 31697 cols, 99739 nonzeros  0s
+12699 rows, 31675 cols, 99730 nonzeros  0s
+Presolve : Reductions: rows 12699(-130269); columns 31675(-27965); elements 99730(-163896)
+Solving the presolved LP
+Using EKK dual simplex solver - serial
+  Iteration        Objective     Infeasibilities num(sum)
+          0     0.0000000000e+00 Ph1: 0(0) 0s
+      17203     9.1992880405e+06 Pr: 0(0); Du: 0(1.24345e-14) 5s
+      17203     9.1992880405e+06 Pr: 0(0); Du: 0(1.24345e-14) 5s
+Solving the original LP from the solution after postsolve
+Model   status      : Optimal
+Simplex   iterations: 17203
+Objective value     :  9.1992880405e+06
+HiGHS run time      :          5.04
+Writing the solution to /tmp/linopy-solve-p2xrozr7.sol
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;ok&#39;, &#39;optimal&#39;)
@@ -3311,7 +3310,7 @@ facecolor will have no effect as it has been defined as &quot;never&quot;.
 <span class="ne">ValueError</span>: Unable to determine Axes to steal space for Colorbar. Either provide the *cax* argument to use as the Axes for the Colorbar, provide the *ax* argument to steal space from it, or add *mappable* to an Axes.
 </pre></div>
 </div>
-<img alt="../_images/16ca6f435fdf117426d39bd73c37256614eec3b9b6ad837c37710987a9846c2b.png" src="../_images/16ca6f435fdf117426d39bd73c37256614eec3b9b6ad837c37710987a9846c2b.png" />
+<img alt="../_images/8526637331b966f3c15ea32cad653c838fa79d40db1e1a3720af7c17f892f68d.png" src="../_images/8526637331b966f3c15ea32cad653c838fa79d40db1e1a3720af7c17f892f68d.png" />
 </div>
 </div>
 <p>Or plot the hourly dispatch grouped by carrier:</p>
