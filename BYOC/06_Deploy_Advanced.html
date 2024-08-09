@@ -394,14 +394,15 @@ document.write(`
 <p>In the <a class="reference internal" href="05_Deploy.html#deployment-settings"><span class="std std-ref">previous section</span></a> we defined the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch as the deployment branch.</p>
 <p>This section is intended for advanced users, who would like to:</p>
 <ol class="arabic simple">
-<li><p>deploy their website from a so-called feature branch,</p></li>
-<li><p>keep the main branch synchronized with the original source, i.e. the upstream.</p></li>
+<li><p>deploy their website from a so-called <code class="docutils literal notranslate"><span class="pre">feature</span></code> branch,</p></li>
+<li><p>keep the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch in sync with the original source, i.e. the upstream.</p></li>
 </ol>
-<p>There is a valid reason why one would want the website deploying from a non-main branch, i.e. commonly termed a feature branch.</p>
+<p>There is a valid reason why one would want the workflow triggering from a non-main branch, i.e. commonly termed a <code class="docutils literal notranslate"><span class="pre">feature</span></code> branch<b><a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></b>.</p>
 <p>The argument for doing so is to keep the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch of your fork <code class="docutils literal notranslate"><span class="pre">https://github.com/&lt;user&gt;/data-science-for-esm</span></code> synchronized/identical to the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch of the upstream <code class="docutils literal notranslate"><span class="pre">https://github.com/fneum/data-science-for-esm</span></code> repository.</p>
 <p>In particular, this approach facilitates comparing the fork and the upstream, retrieving updates/patches, and also allows you <ins>resetting</ins> your fork, in case something has gone completely wrong.</p>
 <p>A simple workflow of keeping your fork’s <code class="docutils literal notranslate"><span class="pre">main</span></code> up-to-date with the upstream <code class="docutils literal notranslate"><span class="pre">main</span></code> is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">fneum</span><span class="o">/</span><span class="n">data</span><span class="o">-</span><span class="n">science</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">esm</span>
+<span class="n">git</span> <span class="n">switch</span> <span class="n">main</span> <span class="c1"># move to the main branch of your fork</span>
 <span class="n">git</span> <span class="n">pull</span> <span class="n">upstream</span> <span class="n">main</span>
 </pre></div>
 </div>
@@ -416,9 +417,16 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">cherry</span><span class="o">-</span><span class="n">pick</span> <span class="o">--</span><span class="k">continue</span>
 </pre></div>
 </div>
-<p>In order to save these changes, follow the instructions in <a class="reference internal" href="#./06_Content.md#modify-the-content"><span class="xref myst">Modify the Content</span></a> section.</p>
+<p>In order to save these changes, follow the instructions in <a class="reference internal" href="07_Content.html#modify-the-content"><span class="std std-ref">Modify the Content</span></a> section.</p>
 <!-- [^1]: <strong><font color='red'>This section is intended for </font></strong> <mark style="background-color: red; color: black"><b>advanced use.</b></mark> -->
 <!-- # Internal Doc References -->
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p><b>In this material the <code class="docutils literal notranslate"><span class="pre">feature</span></code> branch is defined as the <code class="docutils literal notranslate"><span class="pre">content_branch</span></code>.</b></p>
+</aside>
+</aside>
 </section>
 
     <script type="text/x-thebe-config">
